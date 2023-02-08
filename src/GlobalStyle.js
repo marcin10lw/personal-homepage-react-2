@@ -8,4 +8,9 @@ export const GlobalStyle = createGlobalStyle`
   *, ::before, ::after {
     box-sizing: inherit;
   }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: ${({ theme }) => theme.colors.whiteLilac};
+  }
 `;
