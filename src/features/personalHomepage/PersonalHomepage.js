@@ -1,5 +1,12 @@
+import { Container } from "../../common/Container";
+import Header from "./Header";
+
 function PersonalHomepage() {
-  return <div className="App"></div>;
+  return (
+    <Container>
+      <Header />
+    </Container>
+  );
 }
 
 export default PersonalHomepage;
