@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as BrightnessIcon } from "./images/brightness-icon.svg";
 
 const staleGrey = ({ theme }) => theme.colors.staleGrey;
 
@@ -11,7 +12,7 @@ export const Wrapper = styled.div`
   right: 0;
 `;
 
-export const ModeStatus = styled.span`
+export const ThemeStatus = styled.span`
   font-weight: 700;
   font-size: 12px;
   line-height: 1.3;
@@ -24,6 +25,7 @@ export const Switcher = styled.div`
   border: 1px solid rgba(209, 213, 218);
   border-radius: 24px;
   padding: 3px;
+  cursor: pointer;
 `;
 
 export const SwitcherBall = styled.div`
@@ -36,4 +38,6 @@ export const SwitcherBall = styled.div`
   background-color: ${staleGrey};
 `;
 
-export const BrightnessImage = styled.img``;
+export const Brightness = styled(BrightnessIcon)`
+  color: ${({ theme }) => theme.colors.white};
+`;
