@@ -8,4 +8,7 @@ export const theme = {
     dodgerBlue: "#2188FF",
     lightGrey: "#E5E5E5",
   },
+  breakpoints: {
+    mobile: 767,
+  },
 };
