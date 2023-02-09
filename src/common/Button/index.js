@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Button = styled.button`
   display: flex;
@@ -13,9 +13,20 @@ export const Button = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: opacity 150ms ease-out;
+  transition: opacity 150ms ease-out, background-color 100ms linear;
 
   &:hover {
     opacity: 0.85;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 18px;
+    gap: 12px;
+  }
+
+  ${({ darkTheme }) =>
+    darkTheme &&
+    css`
+      background-color: ${({ theme }) => theme.colors.dodgerBlue};
+    `}
 `;
