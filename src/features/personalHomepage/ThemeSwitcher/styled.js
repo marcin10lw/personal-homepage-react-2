@@ -19,11 +19,15 @@ export const ThemeStatus = styled.span`
   line-height: 1.3;
   color: ${staleGrey};
 
-  ${({ darkMode }) =>
-    darkMode &&
+  ${({ darkTheme }) =>
+    darkTheme &&
     css`
       color: ${white};
     `}
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    display: none;
+  }
 `;
 
 export const Switcher = styled.div`
@@ -35,8 +39,8 @@ export const Switcher = styled.div`
   cursor: pointer;
   transition: all 180ms ease-in-out;
 
-  ${({ darkMode }) =>
-    darkMode &&
+  ${({ darkTheme }) =>
+    darkTheme &&
     css`
       background-color: #6d6d6d;
       border-color: #fefefe;
@@ -53,8 +57,8 @@ export const SwitcherBall = styled.div`
   background-color: ${staleGrey};
   transition: all 180ms ease-in-out;
 
-  ${({ darkMode }) =>
-    darkMode &&
+  ${({ darkTheme }) =>
+    darkTheme &&
     css`
       background-color: ${white};
       transform: translateX(20px);
@@ -65,8 +69,8 @@ export const Brightness = styled(BrightnessIcon)`
   color: ${white};
   transition: all 180ms ease-in-out;
 
-  ${({ darkMode }) =>
-    darkMode &&
+  ${({ darkTheme }) =>
+    darkTheme &&
     css`
       color: black;
     `}

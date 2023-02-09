@@ -9,7 +9,7 @@ import {
 } from "./styled";
 
 const ThemeSwitcher = () => {
-  const darkModeOn = useSelector(selectDarkTheme);
+  const darkTheme = useSelector(selectDarkTheme);
   const dispatch = useDispatch();
 
   const onButtonClick = () => {
@@ -18,12 +18,12 @@ const ThemeSwitcher = () => {
 
   return (
     <Wrapper>
-      <ThemeStatus darkMode={darkModeOn}>{`DARK MODE ${
-        darkModeOn ? "ON" : "OFF"
+      <ThemeStatus darkTheme={darkTheme}>{`DARK MODE ${
+        darkTheme ? "ON" : "OFF"
       }`}</ThemeStatus>
-      <Switcher darkMode={darkModeOn} onClick={onButtonClick}>
-        <SwitcherBall darkMode={darkModeOn}>
-          <Brightness darkMode={darkModeOn} />
+      <Switcher darkTheme={darkTheme} onClick={onButtonClick}>
+        <SwitcherBall darkTheme={darkTheme}>
+          <Brightness darkTheme={darkTheme} />
         </SwitcherBall>
       </Switcher>
     </Wrapper>
