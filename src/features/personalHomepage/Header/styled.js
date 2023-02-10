@@ -9,8 +9,6 @@ export const StyledHeader = styled.header`
   align-items: center;
   gap: 72px;
   margin: 119px 0 0 0;
-  color: ${staleGrey};
-  transition: color 100ms linear;
 
   @media (max-width: ${bpMobile}px) {
     flex-direction: column;
@@ -18,12 +16,6 @@ export const StyledHeader = styled.header`
     gap: 16px;
     margin: 21px 0 0 0;
   }
-
-  ${({ darkTheme }) =>
-    darkTheme &&
-    css`
-      color: ${white};
-    `}
 `;
 
 export const HeaderImage = styled.img`
@@ -50,7 +42,6 @@ export const HeaderName = styled.h1`
   color: ${({ theme }) => theme.colors.mineShaft};
   letter-spacing: 0.05em;
   margin: 12px 0 0 0;
-  transition: color 100ms linear;
 
   @media (max-width: ${bpMobile}px) {
     font-size: 22px;
