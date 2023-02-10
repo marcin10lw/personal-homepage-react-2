@@ -9,6 +9,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   gap: 72px;
   margin: 119px 0 0 0;
+  position: relative;
 
   @media (max-width: ${bpMobile}px) {
     flex-direction: column;
