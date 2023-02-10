@@ -37,7 +37,6 @@ export const Switcher = styled.div`
   border-radius: 24px;
   padding: 3px;
   cursor: pointer;
-  transition: all 180ms ease-in-out;
 
   ${({ darkTheme }) =>
     darkTheme &&
@@ -55,7 +54,7 @@ export const SwitcherBall = styled.div`
   height: 20px;
   border-radius: 50%;
   background-color: ${staleGrey};
-  transition: all 180ms ease-in-out;
+  transition: transform 180ms ease-in-out;
 
   ${({ darkTheme }) =>
     darkTheme &&
