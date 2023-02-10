@@ -1,5 +1,8 @@
 import styled, { css } from "styled-components";
 
+const anakiwa = ({ theme }) => theme.colors.anakiwa;
+const shipCove = ({ theme }) => theme.colors.shipCove;
+
 export const Button = styled.button`
   display: flex;
   align-items: center;
@@ -18,8 +21,8 @@ export const Button = styled.button`
 
   &:focus {
     outline: none;
-    box-shadow: 2px -2px 0px #8cc2ff, -2px 2px 0px #8cc2ff, 2px 2px 0px #8cc2ff,
-      -2px -2px 0px #8cc2ff;
+    box-shadow: 2px -2px 0px ${anakiwa}, -2px 2px 0px ${anakiwa},
+      2px 2px 0px ${anakiwa}, -2px -2px 0px ${anakiwa};
   }
 
   &:hover {
@@ -37,8 +40,8 @@ export const Button = styled.button`
       background-color: ${({ theme }) => theme.colors.dodgerBlue};
 
       &:focus {
-        box-shadow: 2px -2px 0px #6d93be, -2px 2px 0px #6d93be,
-          2px 2px 0px #6d93be, -2px -2px 0px #6d93be;
+        box-shadow: 2px -2px 0px ${shipCove}, -2px 2px 0px ${shipCove},
+          2px 2px 0px ${shipCove}, -2px -2px 0px ${shipCove};
       }
     `}
 `;
