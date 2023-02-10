@@ -14,7 +14,7 @@ const Header = () => {
   const darkTheme = useSelector(selectDarkTheme);
 
   return (
-    <StyledHeader darkTheme={darkTheme}>
+    <StyledHeader>
       <HeaderImage
         src={`${process.env.PUBLIC_URL}/assets/images/marcin.jpg`}
         alt="Marcin Augun"
