@@ -30,7 +30,7 @@ export const ThemeStatus = styled.span`
   }
 `;
 
-export const Switcher = styled.div`
+export const Switcher = styled.button`
   width: 48px;
   background-color: ${({ theme }) => theme.colors.lightGrey};
   border: 1px solid ${({ theme }) => theme.colors.iron};
