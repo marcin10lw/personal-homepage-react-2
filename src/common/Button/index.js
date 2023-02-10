@@ -17,7 +17,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: opacity 150ms ease-out, background-color 100ms linear;
+  transition: opacity 150ms ease-out;
 
   &:focus {
     outline: none;
