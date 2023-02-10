@@ -33,7 +33,7 @@ export const ThemeStatus = styled.span`
 export const Switcher = styled.div`
   width: 48px;
   background-color: ${({ theme }) => theme.colors.lightGrey};
-  border: 1px solid rgba(209, 213, 218);
+  border: 1px solid ${({ theme }) => theme.colors.iron};
   border-radius: 24px;
   padding: 3px;
   cursor: pointer;
@@ -42,8 +42,8 @@ export const Switcher = styled.div`
   ${({ darkTheme }) =>
     darkTheme &&
     css`
-      background-color: #6d6d6d;
-      border-color: #fefefe;
+      background-color: ${({ theme }) => theme.colors.doveGrey};
+      border: 1px solid ${({ theme }) => theme.colors.white};
     `}
 `;
 
@@ -72,6 +72,6 @@ export const Brightness = styled(BrightnessIcon)`
   ${({ darkTheme }) =>
     darkTheme &&
     css`
-      color: black;
+      color: ${({ theme }) => theme.colors.mineShaft};
     `}
 `;
