@@ -11,7 +11,7 @@ export const StyledSection = styled.section`
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
     0px 16px 58px rgba(9, 10, 51, 0.03);
 
-  &:last-child {
+  &:nth-child(2) {
     h2 {
       border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
     }
