@@ -1,5 +1,4 @@
 import { Container } from "../../common/Container";
-import ThemeSwitcher from "./ThemeSwitcher";
 import Header from "./Header";
 import { Main } from "../../common/Main";
 import Section from "../../common/Section";
@@ -19,7 +18,6 @@ function PersonalHomepage() {
 
   return (
     <Container>
-      <ThemeSwitcher />
       <Header />
       <Main>
         <Section heading="My skillset includes" dataList={skillset} />

@@ -9,12 +9,14 @@ import {
 import { Button } from "../../../common/Button";
 import { useSelector } from "react-redux";
 import { selectDarkTheme } from "../themeSlice";
+import ThemeSwitcher from "../ThemeSwitcher";
 
 const Header = () => {
   const darkTheme = useSelector(selectDarkTheme);
 
   return (
     <StyledHeader>
+      <ThemeSwitcher />
       <HeaderImage
         src={`${process.env.PUBLIC_URL}/assets/images/marcin.jpg`}
         alt="Marcin Augun"
