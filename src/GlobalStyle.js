@@ -12,13 +12,14 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Inter', sans-serif;
     background-color: ${({ theme }) => theme.colors.whiteLilac};
+    color: ${({ theme }) => theme.colors.staleGrey};
     padding: 0 16px;
-    transition: background-color 100ms linear;
 
     ${({ darkTheme }) =>
       darkTheme &&
       css`
         background-color: ${({ theme }) => theme.colors.mineShaft};
+        color: ${({ theme }) => theme.colors.white};
       `}
   }
 `;
