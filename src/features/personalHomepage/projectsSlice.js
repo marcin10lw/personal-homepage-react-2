@@ -12,8 +12,8 @@ const projectsSlice = createSlice({
       state.status = "success";
       state.projects = projects;
     },
-    fetchProjectsError: ({ status }) => {
-      status = "error";
+    fetchProjectsError: (state) => {
+      state.status = "error";
     },
   },
 });
@@ -22,6 +22,8 @@ export const { fetchProjects, fetchProjectsSuccess, fetchProjectsError } =
   projectsSlice.actions;
 
 const selectProjectsState = (state) => state.projects;
+
 export const selectProjects = (state) => selectProjectsState(state).projects;
+export const selectStatus = (state) => selectProjectsState(state).status;
 
 export default projectsSlice.reducer;
