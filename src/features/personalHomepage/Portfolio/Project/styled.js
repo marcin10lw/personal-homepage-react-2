@@ -82,6 +82,7 @@ export const ProjectDemo = styled.div`
 export const ProjectCode = styled(ProjectDemo)``;
 
 export const ProjectLink = styled.a`
+  line-height: 1.4;
   color: ${scienceBlue};
   margin: 0 0 0 8px;
   text-decoration: none;
