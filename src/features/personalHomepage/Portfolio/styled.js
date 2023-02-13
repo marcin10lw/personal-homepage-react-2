@@ -58,9 +58,11 @@ export const PortfolioDescription = styled.p`
   }
 `;
 
-export const PortfolioGrid = styled.div`
+export const PortfolioList = styled.ul`
+  padding: 0;
+  list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(468px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items: center;
   gap: 32px;
   margin: 24px 0 0 0;

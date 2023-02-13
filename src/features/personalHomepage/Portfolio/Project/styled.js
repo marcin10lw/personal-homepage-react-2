@@ -6,7 +6,7 @@ const white = ({ theme }) => theme.colors.white;
 
 const bpMobile = ({ theme }) => theme.breakpoints.mobile;
 
-export const StyledProject = styled.article`
+export const StyledProject = styled.li`
   width: 100%;
   padding: 56px;
   background-color: ${white};
