@@ -44,4 +44,11 @@ export const Button = styled.button`
           2px 2px 0px ${shipCove}, -2px -2px 0px ${shipCove};
       }
     `}
+
+  ${({ inError }) =>
+    inError &&
+    css`
+      display: inline-block;
+      text-decoration: none;
+    `}
 `;
