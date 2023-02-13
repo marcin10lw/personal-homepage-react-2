@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import { selectProjects, selectStatus } from "../projectsSlice";
 import { selectDarkTheme } from "../themeSlice";
 import Loading from "../../../common/Loading";
+import Error from "../../../common/Error";
 
 const Portfolio = () => {
   const projects = useSelector(selectProjects);
@@ -24,6 +25,7 @@ const Portfolio = () => {
         <PortfolioHeader>Portfolio</PortfolioHeader>
         <PortfolioDescription>My recent projects</PortfolioDescription>
       </PortfolioWrapper>
+      {status === "error" && <Error />}
       {status === "pending" && <Loading />}
       {status === "success" && (
         <PortfolioList>
