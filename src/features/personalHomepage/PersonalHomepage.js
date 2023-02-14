@@ -1,7 +1,7 @@
 import { Container } from "../../common/Container";
 import Header from "./Header";
 import { Main } from "../../common/Main";
-import Section from "../../common/Section";
+import Section from "./Section";
 import Portfolio from "./Portfolio";
 import { skillset } from "./skillset";
 import { toLearn } from "./toLearn";

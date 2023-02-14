@@ -1,9 +1,9 @@
 import { StyledSection, SectionHeader, SectionList } from "./styled";
 import { ListItem } from "./ListItem";
 import { useSelector } from "react-redux";
-import { selectDarkTheme } from "../../features/personalHomepage/themeSlice";
+import { selectDarkTheme } from "../themeSlice";
 
-const Section = ({ heading, dataList, location }) => {
+const Section = ({ heading, dataList }) => {
   const darkTheme = useSelector(selectDarkTheme);
 
   return (
