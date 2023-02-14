@@ -14,6 +14,11 @@ import ThemeSwitcher from "../ThemeSwitcher";
 const Header = () => {
   const darkTheme = useSelector(selectDarkTheme);
 
+  const onButtonClick = () => {
+    const email = "marcin.augun@gmail.com";
+    window.location.href = `mailto:${email}`;
+  };
+
   return (
     <StyledHeader>
       <ThemeSwitcher />
@@ -28,12 +33,12 @@ const Header = () => {
           👨🏻‍💻 I’m a passionate Frontend Developer in love with React, currently
           looking for new job opportunities.
         </HeaderDescription>
-        <Button darkTheme={darkTheme}>
+        <Button darkTheme={darkTheme} onClick={onButtonClick}>
           <EnvelopeImage
             src={`${process.env.PUBLIC_URL}/assets/images/envelope-icon.svg`}
             alt=""
           />
-          Hire Me
+          Let's talk
         </Button>
       </div>
     </StyledHeader>
