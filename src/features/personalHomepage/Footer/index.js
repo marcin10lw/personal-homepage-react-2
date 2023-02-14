@@ -7,6 +7,7 @@ import {
   FooterContent,
   Socials,
   FooterGithub,
+  SocialLink,
 } from "./styled";
 
 const Footer = () => {
@@ -24,13 +25,14 @@ const Footer = () => {
         ideas come to life, feel free to conatct me
       </FooterContent>
       <Socials>
-        <a
+        <SocialLink
+          darkTheme={darkTheme}
           href="https://github.com/marcin10lw"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FooterGithub darkTheme={darkTheme} />
-        </a>
+          <FooterGithub />
+        </SocialLink>
       </Socials>
     </StyledFooter>
   );
