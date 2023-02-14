@@ -4,12 +4,12 @@ import { ReactComponent as GithubIcon } from "./images/github-icon.svg";
 const mineShaft = ({ theme }) => theme.colors.mineShaft;
 const white = ({ theme }) => theme.colors.white;
 const dodgerBlue = ({ theme }) => theme.colors.dodgerBlue;
+const scienceBlue = ({ theme }) => theme.colors.scienceBlue;
 
 const bpMobile = ({ theme }) => theme.breakpoints.mobile;
 
 export const StyledFooter = styled.footer`
   margin: 120px 0 109px;
-  max-width: 670px;
 
   @media (max-width: ${bpMobile}px) {
     margin: 48px 0 31px;
@@ -34,8 +34,13 @@ export const FooterLink = styled.a`
   margin: 24px 0;
   transition: color 120ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+
   &:hover {
-    color: ${({ theme }) => theme.colors.scienceBlue};
+    color: ${scienceBlue};
   }
 
   @media (max-width: ${bpMobile}px) {
@@ -49,7 +54,7 @@ export const FooterLink = styled.a`
       color: ${white};
 
       &:hover {
-        color: ${({ theme }) => theme.colors.dodgerBlue};
+        color: ${dodgerBlue};
       }
     `}
 `;
@@ -60,6 +65,7 @@ export const FooterContent = styled.p`
   letter-spacing: 0.05em;
   color: ${mineShaft};
   margin: 0;
+  max-width: 670px;
 
   @media (max-width: ${bpMobile}px) {
     font-size: 14px;
@@ -81,12 +87,17 @@ export const Socials = styled.div`
   }
 `;
 
-export const FooterGithub = styled(GithubIcon)`
+export const SocialLink = styled.a`
   color: ${mineShaft};
   transition: color 120ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+
   &:hover {
-    color: ${({ theme }) => theme.colors.scienceBlue};
+    color: ${scienceBlue};
   }
 
   ${({ darkTheme }) =>
@@ -99,3 +110,5 @@ export const FooterGithub = styled(GithubIcon)`
       }
     `}
 `;
+
+export const FooterGithub = styled(GithubIcon)``;
