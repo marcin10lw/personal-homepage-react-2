@@ -90,6 +90,7 @@ export const Socials = styled.div`
 export const SocialLink = styled.a`
   color: ${mineShaft};
   transition: color 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 32px;
 
   &:focus {
     outline: none;
@@ -111,4 +112,8 @@ export const SocialLink = styled.a`
     `}
 `;
 
-export const FooterGithub = styled(GithubIcon)``;
+export const FooterGithub = styled(GithubIcon)`
+  @media (max-width: ${bpMobile}px) {
+    width: 32px;
+  }
+`;
