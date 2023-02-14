@@ -8,6 +8,7 @@ import { toLearn } from "./toLearn";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProjects } from "./projectsSlice";
+import Footer from "./Footer";
 
 function PersonalHomepage() {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ function PersonalHomepage() {
         <Section heading="What I want to learn next" dataList={toLearn} />
         <Portfolio />
       </Main>
+      <Footer />
     </Container>
   );
 }
