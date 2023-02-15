@@ -10,12 +10,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html::-webkit-scrollbar {
-    width: 0.7vw;
+    width: 0.5vw;
   }
   
   html::-webkit-scrollbar-thumb {
     background-color: #25252580;
-    border-radius: 4px;
+    border-radius: 6px;
     
     &:hover {
       background-color: #252525bd;
@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   html::-webkit-scrollbar-track {
     background-color: #cfcfcf;
     margin-block: 0.3em;
-    border-radius: 4px;
+    border-radius: 6px;
     
     ${({ darkTheme }) =>
       darkTheme &&
