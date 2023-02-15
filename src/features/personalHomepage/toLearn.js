@@ -5,4 +5,5 @@ export const toLearn = [
   "Node.js",
   "Unit testing",
   "JS classes",
+  "Regex",
 ];
