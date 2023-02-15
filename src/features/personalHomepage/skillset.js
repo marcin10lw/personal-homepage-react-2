@@ -4,6 +4,7 @@ export const skillset = [
   "CSS Grid",
   "CSS Flexbox",
   "CSS BEM convention",
+  "Styled Components",
   "JavaScript: ES6+",
   "Immutability",
   "Working with API (fetch, axios)",
