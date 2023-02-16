@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as GithubIcon } from "./images/github-icon.svg";
 import { ReactComponent as LinkedInIcon } from "./images/linkedin-icon.svg";
+import { ReactComponent as FacebookInIcon } from "./images/facebook-icon.svg";
 
 const mineShaft = ({ theme }) => theme.colors.mineShaft;
 const white = ({ theme }) => theme.colors.white;
@@ -127,5 +128,9 @@ export const FooterGithub = styled(GithubIcon)`
 `;
 
 export const FooterLinkedIn = styled(LinkedInIcon)`
+  width: 100%;
+`;
+
+export const FooterFacebook = styled(FacebookInIcon)`
   width: 100%;
 `;
