@@ -6,8 +6,9 @@ import {
   FooterLink,
   FooterContent,
   Socials,
-  FooterGithub,
   SocialLink,
+  FooterGithub,
+  FooterLinkedIn,
 } from "./styled";
 
 const Footer = () => {
@@ -32,6 +33,14 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <FooterGithub />
+        </SocialLink>
+        <SocialLink
+          darkTheme={darkTheme}
+          href="https://github.com/marcin10lw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FooterLinkedIn />
         </SocialLink>
       </Socials>
     </StyledFooter>

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as GithubIcon } from "./images/github-icon.svg";
+import { ReactComponent as LinkedInIcon } from "./images/linkedin-icon.svg";
 
 const mineShaft = ({ theme }) => theme.colors.mineShaft;
 const white = ({ theme }) => theme.colors.white;
@@ -80,17 +81,22 @@ export const FooterContent = styled.p`
 `;
 
 export const Socials = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
   margin: 56px 0 0 0;
 
   @media (max-width: ${bpMobile}px) {
     margin: 40px 0 0 0;
+    gap: 16px;
   }
 `;
 
 export const SocialLink = styled.a`
+  display: block;
   color: ${mineShaft};
   transition: color 120ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 32px;
+  width: 48px;
 
   &:focus {
     outline: none;
@@ -99,6 +105,10 @@ export const SocialLink = styled.a`
 
   &:hover {
     color: ${scienceBlue};
+  }
+
+  @media (max-width: ${bpMobile}px) {
+    width: 32px;
   }
 
   ${({ darkTheme }) =>
@@ -113,7 +123,9 @@ export const SocialLink = styled.a`
 `;
 
 export const FooterGithub = styled(GithubIcon)`
-  @media (max-width: ${bpMobile}px) {
-    width: 32px;
-  }
+  width: 100%;
+`;
+
+export const FooterLinkedIn = styled(LinkedInIcon)`
+  width: 100%;
 `;
