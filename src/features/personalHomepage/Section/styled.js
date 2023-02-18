@@ -13,7 +13,7 @@ export const StyledSection = styled.section`
 
   &:nth-child(2) {
     h2 {
-      border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
+      border-bottom: 1px solid #e5e5e5;
     }
   }
 
