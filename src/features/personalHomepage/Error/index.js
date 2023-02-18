@@ -15,7 +15,6 @@ const Error = () => {
         Github.
       </ErrorMessage>
       <Button
-        isDarkTheme={isDarkTheme}
         inError
         as="a"
         href="https://github.com/marcin10lw"
