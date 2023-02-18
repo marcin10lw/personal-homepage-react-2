@@ -1,12 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { ReactComponent as GithubIcon } from "./images/github-icon.svg";
 import { ReactComponent as LinkedInIcon } from "./images/linkedin-icon.svg";
 import { ReactComponent as FacebookInIcon } from "./images/facebook-icon.svg";
-
-const mineShaft = ({ theme }) => theme.colors.mineShaft;
-const white = ({ theme }) => theme.colors.white;
-const dodgerBlue = ({ theme }) => theme.colors.dodgerBlue;
-const scienceBlue = ({ theme }) => theme.colors.scienceBlue;
 
 const bpMobile = ({ theme }) => theme.breakpoints.mobile;
 
@@ -31,7 +26,7 @@ export const FooterLink = styled.a`
   font-weight: 900;
   letter-spacing: 0.05em;
   text-decoration: none;
-  color: ${mineShaft};
+  color: ${({ theme }) => theme.colors.headerColor};
   display: inline-block;
   margin: 24px 0;
   transition: color 120ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -42,30 +37,20 @@ export const FooterLink = styled.a`
   }
 
   &:hover {
-    color: ${scienceBlue};
+    color: ${({ theme }) => theme.colors.blue};
   }
 
   @media (max-width: ${bpMobile}px) {
     font-size: 18px;
     margin: 12px 0;
   }
-
-  ${({ isDarkTheme }) =>
-    isDarkTheme &&
-    css`
-      color: ${white};
-
-      &:hover {
-        color: ${dodgerBlue};
-      }
-    `}
 `;
 
 export const FooterContent = styled.p`
   font-size: 18px;
   line-height: 1.4;
   letter-spacing: 0.05em;
-  color: ${mineShaft};
+  color: ${({ theme }) => theme.colors.headerColor};
   margin: 0;
   max-width: 670px;
 
@@ -73,12 +58,6 @@ export const FooterContent = styled.p`
     font-size: 14px;
     line-height: 17px;
   }
-
-  ${({ isDarkTheme }) =>
-    isDarkTheme &&
-    css`
-      color: ${white};
-    `}
 `;
 
 export const Socials = styled.div`
@@ -95,7 +74,7 @@ export const Socials = styled.div`
 
 export const SocialLink = styled.a`
   display: block;
-  color: ${mineShaft};
+  color: ${({ theme }) => theme.colors.headerColor};
   transition: color 120ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 48px;
 
@@ -105,22 +84,12 @@ export const SocialLink = styled.a`
   }
 
   &:hover {
-    color: ${scienceBlue};
+    color: ${({ theme }) => theme.colors.blue};
   }
 
   @media (max-width: ${bpMobile}px) {
     width: 32px;
   }
-
-  ${({ isDarkTheme }) =>
-    isDarkTheme &&
-    css`
-      color: ${white};
-
-      &:hover {
-        color: ${dodgerBlue};
-      }
-    `}
 `;
 
 export const FooterGithub = styled(GithubIcon)`
