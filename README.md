@@ -7,7 +7,9 @@ I present to you my Personal Homepage created with React.js.
 In this project I include my skillset, things I want to learn, my github fetched portfolio, contact information and useful links.
 It's a responsive self-promotion page with theme toggler.
 
-Check it out! ❤
+## Check out the demo!
+
+[![](/demo-image.png)](https://marcin10lw.github.io/personal-homepage-react/)
 
 ## YouCode
 
@@ -40,9 +42,6 @@ YouCode is a frontend development online school with great community.
 ![](/personal-homepaget-react-mobile-preview.gif)
 
 
-## Check out the demo!
-
-[![](/demo-image.png)](https://marcin10lw.github.io/personal-homepage-react/)
 
 ## Create React App
 
