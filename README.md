@@ -6,6 +6,7 @@ I present to you my Personal Homepage created with React.js.
 
 In this project I include my skillset, things I want to learn, my github fetched portfolio, contact information and useful links.
 It's a responsive self-promotion page with theme toggler.
+
 Check it out! ❤
 
 ## YouCode
@@ -30,16 +31,15 @@ YouCode is a frontend development online school with great community.
     -ES6+ FEATURES
 
 ## Page Preview
-**COMING SOON**
-![](todo-list-react-preview.gif)
+![](/personal-homepaget-react-preview.gif)
 
-## Page Not Found Preview
+## Projects Not Found Preview
 **COMING SOON**
 ![](todo-list-react-pageNotFound-preview.gif)
 
-## Task Not Found Preview
+## Mobile Preview
 **COMING SOON**
-![](todo-list-react-taskNotFound-preview.gif)
+![](todo-list-react-pageNotFound-preview.gif)
 
 **Stay tuned for updates!**
 
