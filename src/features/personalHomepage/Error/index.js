@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectDarkTheme } from "../../features/personalHomepage/themeSlice";
+import { selectDarkTheme } from "../themeSlice";
 import { Button } from "../Button";
 import { StyledError, ErrorHeader, ErrorIcon, ErrorMessage } from "./styled";
 

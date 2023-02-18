@@ -10,8 +10,8 @@ import Project from "./Project";
 import { useSelector } from "react-redux";
 import { selectProjects, selectStatus } from "../projectsSlice";
 import { selectDarkTheme } from "../themeSlice";
-import Loading from "../../../common/Loading";
-import Error from "../../../common/Error";
+import Loading from "../Loading";
+import Error from "../Error";
 
 const Portfolio = () => {
   const projects = useSelector(selectProjects);

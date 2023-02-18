@@ -1,4 +1,4 @@
-import { Container } from "../../common/Container";
+import { Container } from "./Container";
 import Header from "./Header";
 import Section from "./Section";
 import Portfolio from "./Portfolio";

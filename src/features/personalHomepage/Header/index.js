@@ -6,7 +6,7 @@ import {
   HeaderDescription,
   EnvelopeImage,
 } from "./styled";
-import { Button } from "../../../common/Button";
+import { Button } from "../Button";
 import { useSelector } from "react-redux";
 import { selectDarkTheme } from "../themeSlice";
 import ThemeSwitcher from "../ThemeSwitcher";
