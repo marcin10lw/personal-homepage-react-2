@@ -38,7 +38,7 @@ export const HeaderPreview = styled.div`
 export const HeaderName = styled.h1`
   font-size: 38px;
   font-weight: 900;
-  color: ${({ theme }) => theme.colors.headerColor};
+  color: ${({ theme }) => theme.colors.globalColorSecond};
   letter-spacing: 0.05em;
   margin: 12px 0 0 0;
 

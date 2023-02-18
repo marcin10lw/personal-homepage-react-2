@@ -26,7 +26,7 @@ export const FooterLink = styled.a`
   font-weight: 900;
   letter-spacing: 0.05em;
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.headerColor};
+  color: ${({ theme }) => theme.colors.globalColorSecond};
   display: inline-block;
   margin: 24px 0;
   transition: color 120ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -50,7 +50,7 @@ export const FooterContent = styled.p`
   font-size: 18px;
   line-height: 1.4;
   letter-spacing: 0.05em;
-  color: ${({ theme }) => theme.colors.headerColor};
+  color: ${({ theme }) => theme.colors.globalColorSecond};
   margin: 0;
   max-width: 670px;
 
@@ -74,7 +74,7 @@ export const Socials = styled.div`
 
 export const SocialLink = styled.a`
   display: block;
-  color: ${({ theme }) => theme.colors.headerColor};
+  color: ${({ theme }) => theme.colors.globalColorSecond};
   transition: color 120ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 48px;
 

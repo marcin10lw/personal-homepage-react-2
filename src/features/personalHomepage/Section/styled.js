@@ -26,7 +26,7 @@ export const StyledSection = styled.section`
 export const SectionHeader = styled.h2`
   font-size: 30px;
   font-weight: 900;
-  color: ${({ theme }) => theme.colors.headerColor};
+  color: ${({ theme }) => theme.colors.globalColorSecond};
   letter-spacing: 0.05em;
   padding: 0 0 13px;
   margin: 0;

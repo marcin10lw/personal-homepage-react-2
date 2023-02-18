@@ -8,7 +8,7 @@ export const StyledPortfolio = styled.section`
 `;
 
 export const PortfolioWrapper = styled.div`
-  color: ${({ theme }) => theme.colors.headerColor};
+  color: ${({ theme }) => theme.colors.globalColorSecond};
   text-align: center;
 `;
 

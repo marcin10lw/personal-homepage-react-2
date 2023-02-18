@@ -5,7 +5,7 @@ const bpMobile = ({ theme }) => theme.breakpoints.mobile;
 
 export const StyledError = styled.div`
   text-align: center;
-  color: ${({ theme }) => theme.colors.headerColor};
+  color: ${({ theme }) => theme.colors.globalColorSecond};
   max-width: 420px;
   margin: 88px auto 0;
 
