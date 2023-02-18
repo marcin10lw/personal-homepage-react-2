@@ -40,9 +40,9 @@ YouCode is a frontend development online school with great community.
 ![](/personal-homepaget-react-mobile-preview.gif)
 
 
-<!-- ## Check it out! -->
+## Check out the demo!
 
-[![](./readmeImage.png)](https://marcin10lw.github.io/To-do-list-react/)
+[![](/demo-image.png)](https://marcin10lw.github.io/personal-homepage-react/)
 
 ## Create React App
 
