@@ -40,7 +40,7 @@ export const HeaderPreview = styled.div`
 export const HeaderName = styled.h1`
   font-size: 38px;
   font-weight: 900;
-  color: ${({ theme }) => theme.colors.mineShaft};
+  color: ${({ theme }) => theme.colors.headerColor};
   letter-spacing: 0.05em;
   margin: 12px 0 0 0;
 
@@ -48,12 +48,6 @@ export const HeaderName = styled.h1`
     font-size: 22px;
     margin: 8px 0 0 0;
   }
-
-  ${({ isDarkTheme }) =>
-    isDarkTheme &&
-    css`
-      color: ${white};
-    `}
 `;
 
 export const HeaderDescription = styled.p`

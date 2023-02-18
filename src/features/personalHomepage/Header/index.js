@@ -28,12 +28,12 @@ const Header = () => {
       />
       <div>
         <HeaderPreview>THIS IS</HeaderPreview>
-        <HeaderName isDarkTheme={isDarkTheme}>Marcin Augun</HeaderName>
+        <HeaderName>Marcin Augun</HeaderName>
         <HeaderDescription>
           👨🏻‍💻 I’m a passionate Frontend Developer in love with React, currently
           looking for new job opportunities.
         </HeaderDescription>
-        <Button isDarkTheme={isDarkTheme} onClick={onButtonClick}>
+        <Button onClick={onButtonClick}>
           <EnvelopeImage
             src={`${process.env.PUBLIC_URL}/assets/images/envelope-icon.svg`}
             alt=""
