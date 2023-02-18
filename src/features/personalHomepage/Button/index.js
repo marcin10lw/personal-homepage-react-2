@@ -6,7 +6,7 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   gap: 16px;
-  background-color: ${({ theme }) => theme.colors.buttonBackground};
+  background-color: ${({ theme }) => theme.colors.blue};
   color: ${({ theme }) => theme.colors.white};
   border: 1px solid rgba(209, 213, 218, 0.3);
   font-size: 20px;
