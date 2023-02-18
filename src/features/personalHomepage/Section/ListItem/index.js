@@ -13,7 +13,7 @@ export const ListItem = styled.li`
     width: 9px;
     height: 9px;
     vertical-align: middle;
-    background-color: ${({ theme }) => theme.colors.scienceBlue};
+    background-color: ${({ theme }) => theme.colors.blue};
     border-radius: 50%;
     margin: 0 16px 0 0;
 
@@ -21,12 +21,6 @@ export const ListItem = styled.li`
       width: 6px;
       height: 6px;
     }
-
-    ${({ isDarkTheme }) =>
-      isDarkTheme &&
-      css`
-        background-color: ${({ theme }) => theme.colors.dodgerBlue};
-      `}
   }
 
   @media (max-width: ${bpMobile}px) {
