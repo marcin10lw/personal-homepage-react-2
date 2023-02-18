@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { ReactComponent as GithubIcon } from "./images/github-icon.svg";
 
 const bpMobile = ({ theme }) => theme.breakpoints.mobile;
@@ -8,32 +8,20 @@ export const StyledPortfolio = styled.section`
 `;
 
 export const PortfolioWrapper = styled.div`
-  color: ${({ theme }) => theme.colors.mineShaft};
+  color: ${({ theme }) => theme.colors.headerColor};
   text-align: center;
-
-  ${({ isDarkTheme }) =>
-    isDarkTheme &&
-    css`
-      color: ${({ theme }) => theme.colors.white};
-    `}
 `;
 
 export const PortfolioIcon = styled(GithubIcon)`
   width: 40px;
   height: 39px;
   object-fit: cover;
-  color: ${({ theme }) => theme.colors.scienceBlue};
+  color: ${({ theme }) => theme.colors.blue};
 
   @media (max-width: ${bpMobile}px) {
     width: 32px;
     height: 31px;
   }
-
-  ${({ isDarkTheme }) =>
-    isDarkTheme &&
-    css`
-      color: ${({ theme }) => theme.colors.dodgerBlue};
-    `}
 `;
 
 export const PortfolioHeader = styled.h2`
