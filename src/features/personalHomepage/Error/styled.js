@@ -5,19 +5,13 @@ const bpMobile = ({ theme }) => theme.breakpoints.mobile;
 
 export const StyledError = styled.div`
   text-align: center;
-  color: ${({ theme }) => theme.colors.mineShaft};
+  color: ${({ theme }) => theme.colors.headerColor};
   max-width: 420px;
   margin: 88px auto 0;
 
   @media (max-width: ${bpMobile}px) {
     margin-top: 50px;
   }
-
-  ${({ isDarkTheme }) =>
-    isDarkTheme &&
-    css`
-      color: ${({ theme }) => theme.colors.white};
-    `}
 `;
 
 export const ErrorIcon = styled(DangerIcon)`
