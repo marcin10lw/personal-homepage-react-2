@@ -37,14 +37,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Inter', sans-serif;
     background-color: ${({ theme }) => theme.colors.bodyBackground};
-    color: ${({ theme }) => theme.colors.staleGrey};
+    color: ${({ theme }) => theme.colors.globalColor};
     padding: 0 16px;
-
-    ${({ isDarkTheme }) =>
-      isDarkTheme &&
-      css`
-        background-color: ${({ theme }) => theme.colors.mineShaft};
-        color: ${({ theme }) => theme.colors.white};
-      `}
   }
 `;
