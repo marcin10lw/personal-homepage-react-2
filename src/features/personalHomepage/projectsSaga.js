@@ -1,4 +1,4 @@
-import { call, put, takeLatest } from "redux-saga/effects";
+import { call, delay, put, takeLatest } from "redux-saga/effects";
 import { getProjects } from "./getProjects";
 import {
   fetchProjects,
@@ -8,6 +8,7 @@ import {
 
 function* fetchProjectsHandler() {
   try {
+    yield delay(1000);
     const projects = yield call(getProjects);
     yield put(fetchProjectsSuccess(projects));
   } catch (error) {
