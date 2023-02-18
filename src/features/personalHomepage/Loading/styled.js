@@ -8,13 +8,7 @@ export const StyledLoading = styled.div`
 export const LoadingMessage = styled.p`
   font-size: 20px;
   letter-spacing: 0.05em;
-  color: ${({ theme }) => theme.colors.mineShaft};
-
-  ${({ isDarkTheme }) =>
-    isDarkTheme &&
-    css`
-      color: ${({ theme }) => theme.colors.white};
-    `}
+  color: ${({ theme }) => theme.colors.headerColor};
 `;
 
 export const LoadingSpinner = styled.div`
@@ -22,7 +16,7 @@ export const LoadingSpinner = styled.div`
   height: 160px;
   margin: 48px auto 0;
   border: 11.375px solid rgba(209, 213, 218, 0.3);
-  border-top: 11.375px solid ${({ theme }) => theme.colors.scienceBlue};
+  border-top: 11.375px solid ${({ theme }) => theme.colors.blue};
   border-radius: 50%;
   animation: spinner 1s linear infinite;
 
