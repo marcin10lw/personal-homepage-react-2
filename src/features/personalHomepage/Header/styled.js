@@ -1,7 +1,5 @@
 import styled, { css } from "styled-components";
 
-const staleGrey = ({ theme }) => theme.colors.staleGrey;
-const white = ({ theme }) => theme.colors.white;
 const bpMobile = ({ theme }) => theme.breakpoints.mobile;
 
 export const StyledHeader = styled.header`
