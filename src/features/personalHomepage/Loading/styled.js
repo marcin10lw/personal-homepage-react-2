@@ -10,8 +10,8 @@ export const LoadingMessage = styled.p`
   letter-spacing: 0.05em;
   color: ${({ theme }) => theme.colors.mineShaft};
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${({ theme }) => theme.colors.white};
     `}

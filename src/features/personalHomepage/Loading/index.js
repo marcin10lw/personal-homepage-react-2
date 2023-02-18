@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
-import { selectDarkTheme } from "../themeSlice";
+import { selectisDarkTheme } from "../themeSlice";
 import { StyledLoading, LoadingMessage, LoadingSpinner } from "./styled";
 
 const Loading = () => {
-  const darkTheme = useSelector(selectDarkTheme);
+  const isDarkTheme = useSelector(selectisDarkTheme);
 
   return (
     <StyledLoading>
-      <LoadingMessage darkTheme={darkTheme}>
+      <LoadingMessage isDarkTheme={isDarkTheme}>
         Please wait, projects are being loaded...
       </LoadingMessage>
       <LoadingSpinner />

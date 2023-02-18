@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
-import { selectDarkTheme } from "../themeSlice";
+import { selectisDarkTheme } from "../themeSlice";
 import { Button } from "../Button";
 import { StyledError, ErrorHeader, ErrorIcon, ErrorMessage } from "./styled";
 
 const Error = () => {
-  const darkTheme = useSelector(selectDarkTheme);
+  const isDarkTheme = useSelector(selectisDarkTheme);
 
   return (
-    <StyledError darkTheme={darkTheme}>
+    <StyledError isDarkTheme={isDarkTheme}>
       <ErrorIcon />
       <ErrorHeader>Ooops! Something went wrong...</ErrorHeader>
       <ErrorMessage>
@@ -15,7 +15,7 @@ const Error = () => {
         Github.
       </ErrorMessage>
       <Button
-        darkTheme={darkTheme}
+        isDarkTheme={isDarkTheme}
         inError
         as="a"
         href="https://github.com/marcin10lw"

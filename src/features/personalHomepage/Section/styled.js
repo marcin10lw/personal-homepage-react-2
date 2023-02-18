@@ -22,8 +22,8 @@ export const StyledSection = styled.section`
     padding: 16px;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       background-color: rgba(54, 54, 54, 0.72);
     `}
@@ -43,8 +43,8 @@ export const SectionHeader = styled.h2`
     padding: 0 0 12px;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${white};
       border-bottom: 1px solid rgba(209, 213, 218, 0.1);

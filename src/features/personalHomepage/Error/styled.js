@@ -13,8 +13,8 @@ export const StyledError = styled.div`
     margin-top: 50px;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${({ theme }) => theme.colors.white};
     `}

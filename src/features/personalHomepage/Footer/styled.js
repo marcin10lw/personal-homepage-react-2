@@ -50,8 +50,8 @@ export const FooterLink = styled.a`
     margin: 12px 0;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${white};
 
@@ -74,8 +74,8 @@ export const FooterContent = styled.p`
     line-height: 17px;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${white};
     `}
@@ -112,8 +112,8 @@ export const SocialLink = styled.a`
     width: 32px;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${white};
 

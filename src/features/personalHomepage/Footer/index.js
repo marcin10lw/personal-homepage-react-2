@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectDarkTheme } from "../themeSlice";
+import { selectisDarkTheme } from "../themeSlice";
 import {
   StyledFooter,
   FooterHeading,
@@ -13,22 +13,22 @@ import {
 } from "./styled";
 
 const Footer = () => {
-  const darkTheme = useSelector(selectDarkTheme);
+  const isDarkTheme = useSelector(selectisDarkTheme);
 
   return (
     <StyledFooter>
       <FooterHeading>LET'S TALK!</FooterHeading>
-      <FooterLink darkTheme={darkTheme} href="mailto:marcin.augun@gmail.com">
+      <FooterLink isDarkTheme={isDarkTheme} href="mailto:marcin.augun@gmail.com">
         marcin.augun@gmail.com
       </FooterLink>
-      <FooterContent darkTheme={darkTheme}>
+      <FooterContent isDarkTheme={isDarkTheme}>
         I’m always open to new projects whenever I have the time. If you have a
         website, dashboard or mobile app in mind and need some help to make your
         ideas come to life, feel free to conatct me
       </FooterContent>
       <Socials>
         <SocialLink
-          darkTheme={darkTheme}
+          isDarkTheme={isDarkTheme}
           href="https://github.com/marcin10lw"
           target="_blank"
           rel="noopener noreferrer"
@@ -36,7 +36,7 @@ const Footer = () => {
           <FooterGithub />
         </SocialLink>
         <SocialLink
-          darkTheme={darkTheme}
+          isDarkTheme={isDarkTheme}
           href="https://www.linkedin.com/in/marcin-augun-951659266/"
           target="_blank"
           rel="noopener noreferrer"
@@ -44,7 +44,7 @@ const Footer = () => {
           <FooterLinkedIn />
         </SocialLink>
         <SocialLink
-          darkTheme={darkTheme}
+          isDarkTheme={isDarkTheme}
           href="https://www.facebook.com/profile.php?id=100004929347890"
           target="_blank"
           rel="noopener noreferrer"

@@ -29,8 +29,8 @@ export const Button = styled.button`
     gap: 12px;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       background-color: ${({ theme }) => theme.colors.dodgerBlue};
 

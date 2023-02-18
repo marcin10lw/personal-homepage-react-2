@@ -25,8 +25,8 @@ export const StyledProject = styled.li`
     padding: 24px;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       background-color: rgba(54, 54, 54, 0.72);
       border: 6px solid rgba(209, 213, 218, 0.1);
@@ -48,8 +48,8 @@ export const ProjectName = styled.h3`
     font-size: 16px;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${white};
     `}
@@ -98,8 +98,8 @@ export const ProjectLink = styled.a`
     opacity: 0.85;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${dodgerBlue};
 

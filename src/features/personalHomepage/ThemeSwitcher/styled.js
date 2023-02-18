@@ -19,8 +19,8 @@ export const ThemeStatus = styled.span`
   line-height: 1.3;
   color: ${staleGrey};
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${white};
     `}
@@ -38,8 +38,8 @@ export const Switcher = styled.button`
   padding: 3px;
   cursor: pointer;
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       background-color: ${({ theme }) => theme.colors.doveGrey};
       border: 1px solid ${({ theme }) => theme.colors.white};
@@ -56,8 +56,8 @@ export const SwitcherBall = styled.div`
   background-color: ${staleGrey};
   transition: transform 180ms ease-in-out;
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       background-color: ${white};
       transform: translateX(20px);
@@ -68,8 +68,8 @@ export const Brightness = styled(BrightnessIcon)`
   color: ${white};
   transition: all 180ms ease-in-out;
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${({ theme }) => theme.colors.mineShaft};
     `}

@@ -11,8 +11,8 @@ export const PortfolioWrapper = styled.div`
   color: ${({ theme }) => theme.colors.mineShaft};
   text-align: center;
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${({ theme }) => theme.colors.white};
     `}
@@ -29,8 +29,8 @@ export const PortfolioIcon = styled(GithubIcon)`
     height: 31px;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${({ theme }) => theme.colors.dodgerBlue};
     `}

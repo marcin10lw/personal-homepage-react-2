@@ -9,19 +9,19 @@ import {
 import Project from "./Project";
 import { useSelector } from "react-redux";
 import { selectProjects, selectStatus } from "../projectsSlice";
-import { selectDarkTheme } from "../themeSlice";
+import { selectisDarkTheme } from "../themeSlice";
 import Loading from "../Loading";
 import Error from "../Error";
 
 const Portfolio = () => {
   const projects = useSelector(selectProjects);
-  const darkTheme = useSelector(selectDarkTheme);
+  const isDarkTheme = useSelector(selectisDarkTheme);
   const status = useSelector(selectStatus);
 
   return (
     <StyledPortfolio>
-      <PortfolioWrapper darkTheme={darkTheme}>
-        <PortfolioIcon darkTheme={darkTheme} />
+      <PortfolioWrapper isDarkTheme={isDarkTheme}>
+        <PortfolioIcon isDarkTheme={isDarkTheme} />
         <PortfolioHeader>Portfolio</PortfolioHeader>
         <PortfolioDescription>My recent projects</PortfolioDescription>
       </PortfolioWrapper>

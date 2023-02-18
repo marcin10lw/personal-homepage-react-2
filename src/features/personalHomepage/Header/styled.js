@@ -49,8 +49,8 @@ export const HeaderName = styled.h1`
     margin: 8px 0 0 0;
   }
 
-  ${({ darkTheme }) =>
-    darkTheme &&
+  ${({ isDarkTheme }) =>
+    isDarkTheme &&
     css`
       color: ${white};
     `}

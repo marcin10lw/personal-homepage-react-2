@@ -8,11 +8,11 @@ import {
 } from "./styled";
 import { Button } from "../Button";
 import { useSelector } from "react-redux";
-import { selectDarkTheme } from "../themeSlice";
+import { selectisDarkTheme } from "../themeSlice";
 import ThemeSwitcher from "../ThemeSwitcher";
 
 const Header = () => {
-  const darkTheme = useSelector(selectDarkTheme);
+  const isDarkTheme = useSelector(selectisDarkTheme);
 
   const onButtonClick = () => {
     const email = "marcin.augun@gmail.com";
@@ -28,12 +28,12 @@ const Header = () => {
       />
       <div>
         <HeaderPreview>THIS IS</HeaderPreview>
-        <HeaderName darkTheme={darkTheme}>Marcin Augun</HeaderName>
+        <HeaderName isDarkTheme={isDarkTheme}>Marcin Augun</HeaderName>
         <HeaderDescription>
           👨🏻‍💻 I’m a passionate Frontend Developer in love with React, currently
           looking for new job opportunities.
         </HeaderDescription>
-        <Button darkTheme={darkTheme} onClick={onButtonClick}>
+        <Button isDarkTheme={isDarkTheme} onClick={onButtonClick}>
           <EnvelopeImage
             src={`${process.env.PUBLIC_URL}/assets/images/envelope-icon.svg`}
             alt=""

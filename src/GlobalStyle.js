@@ -27,8 +27,8 @@ export const GlobalStyle = createGlobalStyle`
     margin-block: 0.3em;
     border-radius: 6px;
     
-    ${({ darkTheme }) =>
-      darkTheme &&
+    ${({ isDarkTheme }) =>
+      isDarkTheme &&
       css`
         background-color: #8a8a8a;
       `}
@@ -36,12 +36,12 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Inter', sans-serif;
-    background-color: ${({ theme }) => theme.colors.whiteLilac};
+    background-color: ${({ theme }) => theme.colors.bodyBackground};
     color: ${({ theme }) => theme.colors.staleGrey};
     padding: 0 16px;
 
-    ${({ darkTheme }) =>
-      darkTheme &&
+    ${({ isDarkTheme }) =>
+      isDarkTheme &&
       css`
         background-color: ${({ theme }) => theme.colors.mineShaft};
         color: ${({ theme }) => theme.colors.white};

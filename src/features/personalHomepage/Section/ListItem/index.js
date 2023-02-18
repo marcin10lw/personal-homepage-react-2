@@ -22,8 +22,8 @@ export const ListItem = styled.li`
       height: 6px;
     }
 
-    ${({ darkTheme }) =>
-      darkTheme &&
+    ${({ isDarkTheme }) =>
+      isDarkTheme &&
       css`
         background-color: ${({ theme }) => theme.colors.dodgerBlue};
       `}

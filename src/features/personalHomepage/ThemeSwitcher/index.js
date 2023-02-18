@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectDarkTheme, toggleDarkTheme } from "../themeSlice";
+import { selectisDarkTheme, toggleisDarkTheme } from "../themeSlice";
 import {
   Wrapper,
   ThemeStatus,
@@ -9,21 +9,21 @@ import {
 } from "./styled";
 
 const ThemeSwitcher = () => {
-  const darkTheme = useSelector(selectDarkTheme);
+  const isDarkTheme = useSelector(selectisDarkTheme);
   const dispatch = useDispatch();
 
   const onButtonClick = () => {
-    dispatch(toggleDarkTheme());
+    dispatch(toggleisDarkTheme());
   };
 
   return (
     <Wrapper>
-      <ThemeStatus darkTheme={darkTheme}>{`DARK MODE ${
-        darkTheme ? "ON" : "OFF"
+      <ThemeStatus isDarkTheme={isDarkTheme}>{`DARK MODE ${
+        isDarkTheme ? "ON" : "OFF"
       }`}</ThemeStatus>
-      <Switcher darkTheme={darkTheme} onClick={onButtonClick}>
-        <SwitcherBall darkTheme={darkTheme}>
-          <Brightness darkTheme={darkTheme} />
+      <Switcher isDarkTheme={isDarkTheme} onClick={onButtonClick}>
+        <SwitcherBall isDarkTheme={isDarkTheme}>
+          <Brightness isDarkTheme={isDarkTheme} />
         </SwitcherBall>
       </Switcher>
     </Wrapper>
