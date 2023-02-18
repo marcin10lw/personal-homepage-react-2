@@ -23,7 +23,7 @@ const ThemeSwitcher = () => {
       }`}</ThemeStatus>
       <Switcher isDarkTheme={isDarkTheme} onClick={onButtonClick}>
         <SwitcherBall isDarkTheme={isDarkTheme}>
-          <Brightness isDarkTheme={isDarkTheme} />
+          <Brightness />
         </SwitcherBall>
       </Switcher>
     </Wrapper>
