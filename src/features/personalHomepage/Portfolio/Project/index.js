@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux";
-import { selectisDarkTheme } from "../../themeSlice";
 import {
   StyledProject,
   ProjectName,
@@ -10,16 +8,13 @@ import {
 } from "./styled";
 
 const Project = ({ projectName, description, code, userName }) => {
-  const isDarkTheme = useSelector(selectisDarkTheme);
-
   return (
-    <StyledProject isDarkTheme={isDarkTheme}>
-      <ProjectName isDarkTheme={isDarkTheme}>{projectName}</ProjectName>
+    <StyledProject>
+      <ProjectName>{projectName}</ProjectName>
       <ProjectDescription>{description}</ProjectDescription>
       <ProjectDemo>
         Demo:
         <ProjectLink
-          isDarkTheme={isDarkTheme}
           href={`https://${userName}.github.io/${projectName}/`}
           target="_blank"
           rel="noopener noreferrer"
@@ -29,12 +24,7 @@ const Project = ({ projectName, description, code, userName }) => {
       </ProjectDemo>
       <ProjectCode>
         Code:
-        <ProjectLink
-          isDarkTheme={isDarkTheme}
-          href={code}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <ProjectLink href={code} target="_blank" rel="noopener noreferrer">
           {code}
         </ProjectLink>
       </ProjectCode>
