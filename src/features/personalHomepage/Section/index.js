@@ -1,19 +1,13 @@
 import { StyledSection, SectionHeader, SectionList } from "./styled";
 import { ListItem } from "./ListItem";
-import { useSelector } from "react-redux";
-import { selectisDarkTheme } from "../themeSlice";
 
 const Section = ({ heading, dataList }) => {
-  const isDarkTheme = useSelector(selectisDarkTheme);
-
   return (
-    <StyledSection isDarkTheme={isDarkTheme}>
-      <SectionHeader isDarkTheme={isDarkTheme}>{heading}</SectionHeader>
+    <StyledSection>
+      <SectionHeader>{heading}</SectionHeader>
       <SectionList>
         {dataList.map((item) => (
-          <ListItem key={item} isDarkTheme={isDarkTheme}>
-            {item}
-          </ListItem>
+          <ListItem key={item}>{item}</ListItem>
         ))}
       </SectionList>
     </StyledSection>
