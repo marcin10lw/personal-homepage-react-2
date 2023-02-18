@@ -17,16 +17,11 @@ export const Button = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: opacity 150ms ease-out;
-
-  &:focus {
-    outline: none;
-    box-shadow: 2px -2px 0px ${anakiwa}, -2px 2px 0px ${anakiwa},
-      2px 2px 0px ${anakiwa}, -2px -2px 0px ${anakiwa};
-  }
+  transition: box-shadow 150ms ease-out;
 
   &:hover {
-    opacity: 0.85;
+    box-shadow: 2px -2px 0px ${anakiwa}, -2px 2px 0px ${anakiwa},
+      2px 2px 0px ${anakiwa}, -2px -2px 0px ${anakiwa};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
@@ -39,7 +34,7 @@ export const Button = styled.button`
     css`
       background-color: ${({ theme }) => theme.colors.dodgerBlue};
 
-      &:focus {
+      &:hover {
         box-shadow: 2px -2px 0px ${shipCove}, -2px 2px 0px ${shipCove},
           2px 2px 0px ${shipCove}, -2px -2px 0px ${shipCove};
       }
