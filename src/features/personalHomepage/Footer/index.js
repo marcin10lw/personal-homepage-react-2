@@ -7,7 +7,6 @@ import {
   SocialLink,
   FooterGithub,
   FooterLinkedIn,
-  FooterFacebook,
 } from "./styled";
 
 const Footer = () => {
@@ -36,13 +35,6 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <FooterLinkedIn />
-        </SocialLink>
-        <SocialLink
-          href="https://www.facebook.com/profile.php?id=100004929347890"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FooterFacebook />
         </SocialLink>
       </Socials>
     </StyledFooter>
