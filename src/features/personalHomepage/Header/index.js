@@ -30,8 +30,11 @@ const Header = () => {
         <HeaderPreview>THIS IS</HeaderPreview>
         <HeaderName>Marcin Augun</HeaderName>
         <HeaderDescription>
-          👨🏻‍💻 I’m a passionate Frontend Developer in love with React, currently
-          looking for new job opportunities.
+          I am searching for a job as junior frontend developer, where I will be
+          able do develop and gain professional experience. I am passionate
+          about creating beautiful and intuitive user interfaces in React. I am
+          constantly seeking out new design trends and coding techniques to
+          ensure that my work is both modern and efficient.
         </HeaderDescription>
         <Button onClick={onButtonClick}>
           <EnvelopeImage

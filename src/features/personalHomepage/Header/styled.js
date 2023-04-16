@@ -54,6 +54,7 @@ export const HeaderDescription = styled.p`
   line-height: 1.4;
   letter-spacing: 0.05em;
   margin: 35px 0 32px;
+  max-width: 600px;
 
   @media (max-width: ${bpMobile}px) {
     font-size: 17px;
