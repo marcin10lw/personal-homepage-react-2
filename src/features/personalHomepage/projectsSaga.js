@@ -6,12 +6,15 @@ import {
   fetchProjectsSuccess,
 } from "./projectsSlice";
 
+const EXAMPLE_DELAY = 1000;
+
 function* fetchProjectsHandler() {
   try {
-    yield delay(1000);
+    yield delay(EXAMPLE_DELAY);
     const projects = yield call(getProjects);
     yield put(fetchProjectsSuccess(projects));
   } catch (error) {
+    yield delay(EXAMPLE_DELAY);
     yield put(fetchProjectsError());
   }
 }
