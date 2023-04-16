@@ -1,6 +1,4 @@
-import styled, { css } from "styled-components";
-
-const bpMobile = ({ theme }) => theme.breakpoints.mobile;
+import styled from "styled-components";
 
 export const ListItem = styled.li`
   font-size: 18px;
@@ -17,13 +15,13 @@ export const ListItem = styled.li`
     border-radius: 50%;
     margin: 0 16px 0 0;
 
-    @media (max-width: ${bpMobile}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
       width: 6px;
       height: 6px;
     }
   }
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 14px;
   }
 `;

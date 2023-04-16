@@ -1,7 +1,4 @@
-import styled, { css } from "styled-components";
-
-const bpMobile = ({ theme }) => theme.breakpoints.mobile;
-const white = ({ theme }) => theme.colors.white;
+import styled from "styled-components";
 
 export const StyledSection = styled.section`
   margin: 72px 0 0 0;
@@ -17,7 +14,7 @@ export const StyledSection = styled.section`
     }
   }
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     margin: 48px 0 0 0;
     padding: 16px;
   }
@@ -32,7 +29,7 @@ export const SectionHeader = styled.h2`
   margin: 0;
   border-bottom: 1px solid ${({ theme }) => theme.colors.sectionBorder};
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 18px;
     padding: 0 0 12px;
   }
@@ -48,7 +45,7 @@ export const SectionList = styled.ul`
   align-items: center;
   gap: 8px;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     margin: 25px 0 0 0;
   }
 `;

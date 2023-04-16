@@ -3,12 +3,10 @@ import { ReactComponent as GithubIcon } from "./images/github-icon.svg";
 import { ReactComponent as LinkedInIcon } from "./images/linkedin-icon.svg";
 import { ReactComponent as FacebookInIcon } from "./images/facebook-icon.svg";
 
-const bpMobile = ({ theme }) => theme.breakpoints.mobile;
-
 export const StyledFooter = styled.footer`
   margin: 120px 0 109px;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     margin: 48px 0 31px;
   }
 `;
@@ -40,7 +38,7 @@ export const FooterLink = styled.a`
     color: ${({ theme }) => theme.colors.blue};
   }
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 18px;
     margin: 12px 0;
   }
@@ -54,7 +52,7 @@ export const FooterContent = styled.p`
   margin: 0;
   max-width: 670px;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 14px;
     line-height: 17px;
   }
@@ -66,7 +64,7 @@ export const Socials = styled.div`
   gap: 24px;
   margin: 56px 0 0 0;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     margin: 40px 0 0 0;
     gap: 16px;
   }
@@ -87,7 +85,7 @@ export const SocialLink = styled.a`
     color: ${({ theme }) => theme.colors.blue};
   }
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     width: 32px;
   }
 `;

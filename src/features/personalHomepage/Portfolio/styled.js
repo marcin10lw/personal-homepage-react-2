@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as GithubIcon } from "./images/github-icon.svg";
 
-const bpMobile = ({ theme }) => theme.breakpoints.mobile;
-
 export const StyledPortfolio = styled.section`
   margin: 72px 0 0;
 `;
@@ -18,7 +16,7 @@ export const PortfolioIcon = styled(GithubIcon)`
   object-fit: cover;
   color: ${({ theme }) => theme.colors.blue};
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     width: 32px;
     height: 31px;
   }
@@ -30,7 +28,7 @@ export const PortfolioHeader = styled.h2`
   font-weight: 900;
   margin: 12px 0 0 0;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 18px;
   }
 `;
@@ -40,7 +38,7 @@ export const PortfolioDescription = styled.p`
   letter-spacing: 0.05em;
   margin: 8px 0 0 0;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 17px;
     margin: 16px 0 0 0;
   }
@@ -55,7 +53,7 @@ export const PortfolioList = styled.ul`
   gap: 32px;
   margin: 24px 0 0 0;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;
   }

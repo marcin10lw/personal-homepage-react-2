@@ -1,19 +1,32 @@
-import styled, { css } from "styled-components";
-
-const bpMobile = ({ theme }) => theme.breakpoints.mobile;
+import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  display: flex;
-  align-items: center;
-  gap: 72px;
   margin: 119px 0 0 0;
   position: relative;
 
-  @media (max-width: ${bpMobile}px) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    text-align: center;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     margin: 21px 0 0 0;
+    text-align: start;
+  }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 72px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    align-items: flex-start;
   }
 `;
 
@@ -24,7 +37,7 @@ export const HeaderImage = styled.img`
   object-fit: cover;
   border-radius: 50%;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     max-width: 128px;
     margin: 13px 0 0 0;
   }
@@ -42,7 +55,7 @@ export const HeaderName = styled.h1`
   letter-spacing: 0.05em;
   margin: 12px 0 0 0;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 22px;
     margin: 8px 0 0 0;
   }
@@ -56,16 +69,22 @@ export const HeaderDescription = styled.p`
   margin: 35px 0 32px;
   max-width: 600px;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    max-width: 700px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    max-width: 600px;
     font-size: 17px;
     margin: 16px 0 24px;
+    max-width: auto;
   }
 `;
 
 export const EnvelopeImage = styled.img`
   object-fit: cover;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     width: 20px;
     height: 20px;
   }

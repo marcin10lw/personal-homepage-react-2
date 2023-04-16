@@ -1,15 +1,10 @@
 import styled from "styled-components";
 
-const sectionBorder = ({ theme }) => theme.colors.sectionBorder;
-const sectionBackground = ({ theme }) => theme.colors.sectionBackground;
-
-const bpMobile = ({ theme }) => theme.breakpoints.mobile;
-
 export const StyledProject = styled.li`
   width: 100%;
   padding: 56px;
-  background-color: ${sectionBackground};
-  border: 6px solid ${sectionBorder};
+  background-color: ${({ theme }) => theme.colors.sectionBackground};
+  border: 6px solid ${({ theme }) => theme.colors.sectionBorder};
   border-radius: 4px;
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
     0px 16px 58px rgba(9, 10, 51, 0.03);
@@ -20,7 +15,7 @@ export const StyledProject = styled.li`
     border: 6px solid ${({ theme }) => theme.colors.sectionHoverBorder};
   }
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     padding: 24px;
   }
 `;
@@ -32,7 +27,7 @@ export const ProjectName = styled.h3`
   color: ${({ theme }) => theme.colors.sectionColor};
   margin: 0;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 16px;
   }
 `;
@@ -43,7 +38,7 @@ export const ProjectDescription = styled.p`
   line-height: 1.4;
   margin: 24px 0;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 14px;
     line-height: 17px;
     margin: 16px 0;
@@ -55,7 +50,7 @@ export const ProjectDemo = styled.div`
   font-size: 18px;
   letter-spacing: 0.05em;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 14px;
     margin: 10px 0 0 0;
   }

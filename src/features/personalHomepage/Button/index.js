@@ -23,9 +23,14 @@ export const Button = styled.button`
       2px 2px 0px ${buttonHover}, -2px -2px 0px ${buttonHover};
   }
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    margin: 0 auto;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 18px;
     gap: 12px;
+    margin: 0 auto 0 0;
   }
 
   ${({ inError }) =>

@@ -1,7 +1,5 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { ReactComponent as DangerIcon } from "./images/danger-icon.svg";
-
-const bpMobile = ({ theme }) => theme.breakpoints.mobile;
 
 export const StyledError = styled.div`
   text-align: center;
@@ -9,7 +7,7 @@ export const StyledError = styled.div`
   max-width: 420px;
   margin: 88px auto 0;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     margin-top: 50px;
   }
 `;
@@ -17,7 +15,7 @@ export const StyledError = styled.div`
 export const ErrorIcon = styled(DangerIcon)`
   width: 37px;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     width: 30px;
   }
 `;
@@ -29,7 +27,7 @@ export const ErrorHeader = styled.h3`
   letter-spacing: 0.05em;
   margin: 16px 0 0 0;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 18px;
     margin: 10px 0 0 0;
   }
@@ -41,7 +39,7 @@ export const ErrorMessage = styled.p`
   letter-spacing: 0.05em;
   margin: 32px 0;
 
-  @media (max-width: ${bpMobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 16px;
     margin: 20px 0;
   }
