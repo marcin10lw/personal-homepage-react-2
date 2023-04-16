@@ -1,4 +1,12 @@
-export const theme = {
+const theme = {
+  breakpoints: {
+    tablet: 1060,
+    mobile: 767,
+  },
+};
+
+export const lightTheme = {
+  ...theme,
   colors: {
     white: "#FFFFFF",
     bodyBackground: "#FBFBFE",
@@ -14,12 +22,10 @@ export const theme = {
     switchBorder: "rgba(209, 213, 218)",
     switcherColor: "#FFFFFF",
   },
-  breakpoints: {
-    mobile: 767,
-  },
 };
 
 export const darkTheme = {
+  ...theme,
   colors: {
     white: "#FFFFFF",
     bodyBackground: "#252525",
@@ -34,8 +40,5 @@ export const darkTheme = {
     grey: "#6D6D6D",
     switchBorder: "#D1D5DA",
     switcherColor: "#252525",
-  },
-  breakpoints: {
-    mobile: 767,
   },
 };
