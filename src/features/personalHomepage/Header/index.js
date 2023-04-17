@@ -50,14 +50,14 @@ const Header = () => {
   };
 
   return (
-    <StyledHeader>
+    <StyledHeader
+      as={motion.header}
+      variants={headerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <ThemeSwitcher />
-      <Wrapper
-        as={motion.div}
-        variants={headerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <Wrapper>
         <HeaderImage
           src={`${process.env.PUBLIC_URL}/assets/images/marcin.jpg`}
           alt="Marcin Augun"
