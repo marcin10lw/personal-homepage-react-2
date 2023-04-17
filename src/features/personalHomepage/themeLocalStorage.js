@@ -2,7 +2,7 @@ const localStorageKey = "theme";
 
 export const getisDarkThemeFromLocalStorage = () => {
   const localStorageTheme = JSON.parse(localStorage.getItem(localStorageKey));
-  return localStorageTheme || false;
+  return localStorageTheme || true;
 };
 
 export const saveisDarkThemeToLocalStorage = (value) => {

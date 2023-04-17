@@ -1,3 +1,4 @@
+import { motion, useAnimation, useInView } from "framer-motion";
 import {
   StyledFooter,
   FooterHeading,
@@ -8,10 +9,46 @@ import {
   FooterGithub,
   FooterLinkedIn,
 } from "./styled";
+import { useEffect } from "react";
+import { useRef } from "react";
+
+const footerVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.95,
+    y: "50",
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    originX: 0,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeInOut",
+    },
+  },
+};
 
 const Footer = () => {
+  const footerRef = useRef(null);
+  const inView = useInView(footerRef, { amount: 0.8 });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible");
+    }
+  }, [animation, inView]);
+
   return (
-    <StyledFooter>
+    <StyledFooter
+      as={motion.footer}
+      ref={footerRef}
+      variants={footerVariants}
+      initial="hidden"
+      animate={animation}
+    >
       <FooterHeading>LET'S TALK!</FooterHeading>
       <FooterLink href="mailto:marcin.augun@gmail.com">
         marcin.augun@gmail.com

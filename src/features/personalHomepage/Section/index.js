@@ -4,24 +4,25 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useEffect } from "react";
 
+const sectionVariants = {
+  hidden: {
+    opacity: 0,
+    x: -200,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      delay: 0.1,
+    },
+  },
+};
+
 const Section = ({ heading, dataList }) => {
   const sectionRef = useRef(null);
   const inView = useInView(sectionRef, { amount: 0.9 });
   const animation = useAnimation();
-
-  const variants = {
-    hidden: {
-      opacity: 0,
-      x: -200,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.4,
-      },
-    },
-  };
 
   useEffect(() => {
     if (inView) {
@@ -33,7 +34,7 @@ const Section = ({ heading, dataList }) => {
     <StyledSection
       as={motion.section}
       ref={sectionRef}
-      variants={variants}
+      variants={sectionVariants}
       initial="hidden"
       animate={animation}
     >

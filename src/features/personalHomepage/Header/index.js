@@ -14,15 +14,15 @@ import { motion } from "framer-motion";
 const headerVariants = {
   hidden: {
     opacity: 0,
-    y: "-100vh",
+    y: "-120",
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
-      mass: 0.4,
-      duration: 0.5,
+      duration: 0.6,
+      delay: 0.1,
+      ease: "easeInOut",
       when: "beforeChildren",
     },
   },
