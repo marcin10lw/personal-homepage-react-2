@@ -22,4 +22,5 @@ export const skillset = [
   "Trello",
   "Scrum",
   "Markdown",
+  "Firebase",
 ];
