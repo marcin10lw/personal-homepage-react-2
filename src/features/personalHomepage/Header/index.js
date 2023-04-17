@@ -9,6 +9,39 @@ import {
 } from "./styled";
 import { Button } from "../Button";
 import ThemeSwitcher from "../ThemeSwitcher";
+import { motion } from "framer-motion";
+
+const headerVariants = {
+  hidden: {
+    opacity: 0,
+    y: "-100vh",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      mass: 0.4,
+      duration: 0.5,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const buttonVariants = {
+  hidden: {
+    opacity: 0,
+    x: "100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+    },
+  },
+};
 
 const Header = () => {
   const onButtonClick = () => {
@@ -19,7 +52,12 @@ const Header = () => {
   return (
     <StyledHeader>
       <ThemeSwitcher />
-      <Wrapper>
+      <Wrapper
+        as={motion.div}
+        variants={headerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <HeaderImage
           src={`${process.env.PUBLIC_URL}/assets/images/marcin.jpg`}
           alt="Marcin Augun"
@@ -34,7 +72,11 @@ const Header = () => {
             am constantly seeking out new design trends and coding techniques to
             ensure that my work is both modern and efficient.
           </HeaderDescription>
-          <Button onClick={onButtonClick}>
+          <Button
+            as={motion.button}
+            variants={buttonVariants}
+            onClick={onButtonClick}
+          >
             <EnvelopeImage
               src={`${process.env.PUBLIC_URL}/assets/images/envelope-icon.svg`}
               alt=""
