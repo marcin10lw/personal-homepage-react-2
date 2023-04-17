@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { transitionDelay, transitionTime } from "../transition";
 
 export const StyledSection = styled.section`
   margin: 72px 0 0 0;
@@ -7,6 +8,8 @@ export const StyledSection = styled.section`
   border-radius: 4px;
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
     0px 16px 58px rgba(9, 10, 51, 0.03);
+  transition: background-color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   &:nth-child(2) {
     h2 {
@@ -28,6 +31,9 @@ export const SectionHeader = styled.h2`
   padding: 0 0 13px;
   margin: 0;
   border-bottom: 1px solid ${({ theme }) => theme.colors.sectionBorder};
+  transition: color ${transitionTime} ease-in-out,
+    border-bottom ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 18px;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { transitionDelay, transitionTime } from "../transition";
 
 export const StyledHeader = styled.header`
   margin: 119px 0 0 0;
@@ -54,6 +55,8 @@ export const HeaderName = styled.h1`
   color: ${({ theme }) => theme.colors.globalColorSecond};
   letter-spacing: 0.05em;
   margin: 12px 0 0 0;
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 22px;

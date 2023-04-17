@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as BrightnessIcon } from "./images/brightness-icon.svg";
+import { transitionDelay, transitionTime } from "../transition";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -15,6 +16,8 @@ export const ThemeStatus = styled.span`
   font-size: 12px;
   line-height: 1.3;
   color: ${({ theme }) => theme.colors.globalColor};
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     display: none;
@@ -28,6 +31,8 @@ export const Switcher = styled.button`
   border-radius: 24px;
   padding: 3px;
   cursor: pointer;
+  transition: background-color ${transitionTime} ease-in-out, border ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 `;
 
 export const SwitcherBall = styled.div`
@@ -38,7 +43,9 @@ export const SwitcherBall = styled.div`
   height: 20px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.globalColor};
-  transition: transform 180ms ease-in-out;
+  transition: color ${transitionTime} ease-in-out, transform 1${transitionDelay} ease-in-out,
+    background-color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   ${({ isDarkTheme }) =>
     isDarkTheme &&
@@ -49,5 +56,6 @@ export const SwitcherBall = styled.div`
 
 export const Brightness = styled(BrightnessIcon)`
   color: ${({ theme }) => theme.colors.switcherColor};
-  transition: all 180ms ease-in-out;
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 `;

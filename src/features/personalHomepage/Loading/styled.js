@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { transitionDelay, transitionTime } from "../transition";
 
 export const StyledLoading = styled.div`
   text-align: center;
@@ -9,6 +10,8 @@ export const LoadingMessage = styled.p`
   font-size: 20px;
   letter-spacing: 0.05em;
   color: ${({ theme }) => theme.colors.globalColorSecond};
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 `;
 
 export const LoadingSpinner = styled.div`

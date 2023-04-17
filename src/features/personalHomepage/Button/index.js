@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { transitionDelay, transitionTime } from "../transition";
 
 const buttonHover = ({ theme }) => theme.colors.buttonHover;
 
@@ -16,7 +17,10 @@ export const Button = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: box-shadow 150ms ease-out;
+  transition: color ${transitionTime} ease-in-out,
+    box-shadow ${transitionTime} ease-out,
+    background-color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   &:hover {
     box-shadow: 2px -2px 0px ${buttonHover}, -2px 2px 0px ${buttonHover},

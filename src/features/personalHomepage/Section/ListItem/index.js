@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { transitionDelay, transitionTime } from "../../transition";
 
 export const ListItem = styled.li`
   font-size: 18px;
@@ -14,6 +15,8 @@ export const ListItem = styled.li`
     background-color: ${({ theme }) => theme.colors.blue};
     border-radius: 50%;
     margin: 0 16px 0 0;
+    transition: background-color ${transitionTime} ease-in-out;
+    transition-delay: ${transitionDelay};
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
       width: 6px;

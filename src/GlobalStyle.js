@@ -1,4 +1,8 @@
 import { createGlobalStyle, css } from "styled-components";
+import {
+  transitionDelay,
+  transitionTime,
+} from "./features/personalHomepage/transition";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -39,5 +43,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.bodyBackground};
     color: ${({ theme }) => theme.colors.globalColor};
     padding: 0 16px;
+    transition: background-color ${transitionTime} ease-in-out, color ${transitionTime} ease-in-out;
+    transition-delay: ${transitionDelay}
   }
 `;

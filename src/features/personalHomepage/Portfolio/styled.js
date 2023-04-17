@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as GithubIcon } from "./images/github-icon.svg";
+import { transitionDelay, transitionTime } from "../transition";
 
 export const StyledPortfolio = styled.section`
   margin: 72px 0 0;
@@ -8,6 +9,8 @@ export const StyledPortfolio = styled.section`
 export const PortfolioWrapper = styled.div`
   color: ${({ theme }) => theme.colors.globalColorSecond};
   text-align: center;
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 `;
 
 export const PortfolioIcon = styled(GithubIcon)`
@@ -15,6 +18,8 @@ export const PortfolioIcon = styled(GithubIcon)`
   height: 39px;
   object-fit: cover;
   color: ${({ theme }) => theme.colors.blue};
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     width: 32px;

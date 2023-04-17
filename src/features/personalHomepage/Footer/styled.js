@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as GithubIcon } from "./images/github-icon.svg";
 import { ReactComponent as LinkedInIcon } from "./images/linkedin-icon.svg";
 import { ReactComponent as FacebookInIcon } from "./images/facebook-icon.svg";
+import { transitionDelay, transitionTime } from "../transition";
 
 export const StyledFooter = styled.footer`
   margin: 120px 0 109px;
@@ -27,7 +28,8 @@ export const FooterLink = styled.a`
   color: ${({ theme }) => theme.colors.globalColorSecond};
   display: inline-block;
   margin: 24px 0;
-  transition: color 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   &:focus {
     outline: none;
@@ -51,6 +53,8 @@ export const FooterContent = styled.p`
   color: ${({ theme }) => theme.colors.globalColorSecond};
   margin: 0;
   max-width: 670px;
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 14px;
@@ -75,6 +79,8 @@ export const SocialLink = styled.a`
   color: ${({ theme }) => theme.colors.globalColorSecond};
   transition: color 120ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 48px;
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   &:focus {
     outline: none;

@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import { ReactComponent as DangerIcon } from "./images/danger-icon.svg";
+import { transitionDelay, transitionTime } from "../transition";
 
 export const StyledError = styled.div`
   text-align: center;
   color: ${({ theme }) => theme.colors.globalColorSecond};
   max-width: 420px;
   margin: 88px auto 0;
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     margin-top: 50px;

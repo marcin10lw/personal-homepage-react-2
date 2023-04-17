@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { transitionDelay, transitionTime } from "../../transition";
 
 export const StyledProject = styled.li`
   width: 100%;
@@ -8,8 +9,9 @@ export const StyledProject = styled.li`
   border-radius: 4px;
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
     0px 16px 58px rgba(9, 10, 51, 0.03);
-
-  transition: border 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color ${transitionTime} ease-in-out,
+    border ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   &:hover {
     border: 6px solid ${({ theme }) => theme.colors.sectionHoverBorder};
@@ -26,6 +28,8 @@ export const ProjectName = styled.h3`
   letter-spacing: 0.05em;
   color: ${({ theme }) => theme.colors.sectionColor};
   margin: 0;
+  transition: color ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 16px;
@@ -65,6 +69,9 @@ export const ProjectLink = styled.a`
   text-decoration: none;
   border-bottom: 1px solid rgb(3 102 214 / 20%);
   word-wrap: break-word;
+  transition:   color ${transitionTime} ease-in-out,
+    border-bottom ${transitionTime} ease-in-out;
+  transition-delay: ${transitionDelay};
 
   &:focus {
     outline: none;
