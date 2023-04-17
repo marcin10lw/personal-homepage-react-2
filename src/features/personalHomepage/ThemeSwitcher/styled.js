@@ -31,7 +31,8 @@ export const Switcher = styled.button`
   border-radius: 24px;
   padding: 3px;
   cursor: pointer;
-  transition: background-color ${transitionTime} ease-in-out, border ${transitionTime} ease-in-out;
+  transition: background-color ${transitionTime} ease-in-out,
+    border ${transitionTime} ease-in-out;
   transition-delay: ${transitionDelay};
 `;
 
@@ -43,7 +44,8 @@ export const SwitcherBall = styled.div`
   height: 20px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.globalColor};
-  transition: color ${transitionTime} ease-in-out, transform 1${transitionDelay} ease-in-out,
+  transition: color ${transitionTime} ease-in-out,
+    transform ${transitionDelay} ease-in-out,
     background-color ${transitionTime} ease-in-out;
   transition-delay: ${transitionDelay};
 

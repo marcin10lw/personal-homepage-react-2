@@ -1,3 +1,3 @@
-export const transitionDelay = "80ms";
+export const transitionDelay = "60ms";
 
-export const transitionTime = "150ms";
+export const transitionTime = "160ms";
