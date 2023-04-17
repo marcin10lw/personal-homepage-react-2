@@ -15,16 +15,14 @@ import { useRef } from "react";
 const footerVariants = {
   hidden: {
     opacity: 0,
-    scale: 0.95,
-    y: "50",
+    scale: 0.8,
   },
   visible: {
     opacity: 1,
     scale: 1,
     originX: 0,
-    y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
       ease: "easeInOut",
     },
   },
