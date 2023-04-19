@@ -21,7 +21,7 @@ const sectionVariants = {
 
 const Section = ({ heading, dataList }) => {
   const sectionRef = useRef(null);
-  const inView = useInView(sectionRef, { amount: 0.8 });
+  const inView = useInView(sectionRef, { amount: 0.6 });
   const animation = useAnimation();
 
   useEffect(() => {
