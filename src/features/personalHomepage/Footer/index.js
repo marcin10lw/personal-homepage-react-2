@@ -1,16 +1,12 @@
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   StyledFooter,
   FooterHeading,
   FooterLink,
   FooterContent,
-  Socials,
-  SocialLink,
-  FooterGithub,
-  FooterLinkedIn,
 } from "./styled";
-import { useEffect } from "react";
-import { useRef } from "react";
+import useInViewAnimation from "../useInViewAnimation";
+import Socials from "./Socials";
 
 const footerVariants = {
   hidden: {
@@ -24,25 +20,19 @@ const footerVariants = {
     transition: {
       duration: 0.4,
       ease: "easeInOut",
+      when: "beforeChildren",
+      staggerChildren: 0.2,
     },
   },
 };
 
 const Footer = () => {
-  const footerRef = useRef(null);
-  const inView = useInView(footerRef, { amount: 0.8 });
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start("visible");
-    }
-  }, [animation, inView]);
+  const { animation, ref } = useInViewAnimation(0.5);
 
   return (
     <StyledFooter
       as={motion.footer}
-      ref={footerRef}
+      ref={ref}
       variants={footerVariants}
       initial="hidden"
       animate={animation}
@@ -56,22 +46,7 @@ const Footer = () => {
         website, dashboard or mobile app in mind and need some help to make your
         ideas come to life, feel free to conatct me
       </FooterContent>
-      <Socials>
-        <SocialLink
-          href="https://github.com/marcin10lw"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FooterGithub />
-        </SocialLink>
-        <SocialLink
-          href="https://www.linkedin.com/in/marcin-augun-951659266/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FooterLinkedIn />
-        </SocialLink>
-      </Socials>
+      <Socials />
     </StyledFooter>
   );
 };

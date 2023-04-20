@@ -1,8 +1,7 @@
 import { StyledSection, SectionHeader, SectionList } from "./styled";
 import { ListItem } from "./ListItem";
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useRef } from "react";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
+import useInViewAnimation from "../useInViewAnimation";
 
 const sectionVariants = {
   hidden: {
@@ -20,20 +19,12 @@ const sectionVariants = {
 };
 
 const Section = ({ heading, dataList }) => {
-  const sectionRef = useRef(null);
-  const inView = useInView(sectionRef, { amount: 0.6 });
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start("visible");
-    }
-  }, [animation, inView]);
+  const { animation, ref } = useInViewAnimation(0.5);
 
   return (
     <StyledSection
       as={motion.section}
-      ref={sectionRef}
+      ref={ref}
       variants={sectionVariants}
       initial="hidden"
       animate={animation}

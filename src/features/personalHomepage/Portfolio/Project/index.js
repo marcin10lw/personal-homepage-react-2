@@ -1,4 +1,4 @@
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   StyledProject,
   ProjectName,
@@ -7,41 +7,32 @@ import {
   ProjectCode,
   ProjectLink,
 } from "./styled";
-import { useRef } from "react";
-import { useEffect } from "react";
+import useInViewAnimation from "../../useInViewAnimation";
+
+const variants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      bounce: 1,
+      mass: 0.7,
+    },
+  },
+};
 
 const Project = ({ projectName, description, code, userName }) => {
-  const projectRef = useRef(null);
-  const inView = useInView(projectRef, { amount: 0.4 });
-  const animation = useAnimation();
-
-  const variants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        bounce: 1,
-        mass: 0.7,
-      },
-    },
-  };
-
-  useEffect(() => {
-    if (inView) {
-      animation.start("visible");
-    }
-  }, [animation, inView]);
+  const { animation, ref } = useInViewAnimation(0.4);
 
   return (
     <StyledProject
       as={motion.li}
-      ref={projectRef}
+      ref={ref}
       variants={variants}
       initial="hidden"
       animate={animation}
