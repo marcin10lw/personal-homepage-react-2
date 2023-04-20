@@ -1,8 +1,12 @@
 const localStorageKey = "theme";
 
-export const getisDarkThemeFromLocalStorage = () => {
+export const getIsDarkThemeFromLocalStorage = () => {
   const localStorageTheme = JSON.parse(localStorage.getItem(localStorageKey));
-  return localStorageTheme || true;
+  if (localStorageTheme === null) {
+    return true;
+  }
+
+  return localStorageTheme;
 };
 
 export const saveisDarkThemeToLocalStorage = (value) => {

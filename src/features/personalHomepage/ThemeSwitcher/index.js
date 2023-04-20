@@ -13,7 +13,9 @@ const ThemeSwitcher = () => {
   const dispatch = useDispatch();
 
   const onButtonClick = () => {
-    dispatch(toggleisDarkTheme());
+    setTimeout(() => {
+      dispatch(toggleisDarkTheme());
+    }, 140);
   };
 
   return (
