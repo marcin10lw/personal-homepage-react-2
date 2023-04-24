@@ -15,6 +15,7 @@ export const skillset = [
   "React Router",
   "Redux (Toolkit)",
   "Redux-Saga",
+  "TypeScript basics",
   "NPM",
   "Teamwork",
   "Git",
@@ -23,4 +24,5 @@ export const skillset = [
   "Scrum",
   "Markdown",
   "Firebase",
+  "Framer Motion",
 ];
