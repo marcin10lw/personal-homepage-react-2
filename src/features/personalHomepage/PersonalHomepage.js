@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProjects } from "./projectsSlice";
 import Footer from "./Footer";
-import { currentlyLearning } from "../../currentlyLearning";
+import { currentlyLearning } from "./currentlyLearning";
 
 function PersonalHomepage() {
   const dispatch = useDispatch();
