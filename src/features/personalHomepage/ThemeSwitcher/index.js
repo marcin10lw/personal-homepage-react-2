@@ -1,5 +1,3 @@
-import { useDispatch, useSelector } from "react-redux";
-import { selectisDarkTheme, toggleisDarkTheme } from "../themeSlice";
 import {
   Wrapper,
   ThemeStatus,
@@ -7,14 +5,16 @@ import {
   SwitcherBall,
   Brightness,
 } from "./styled";
+import { useContext } from "react";
+import { ToggleThemeContext } from "../ToggleThemeContext";
 
 const ThemeSwitcher = () => {
-  const isDarkTheme = useSelector(selectisDarkTheme);
-  const dispatch = useDispatch();
+  const { theme, toggleTheme } = useContext(ToggleThemeContext);
+  const isDarkTheme = theme === "dark";
 
   const onButtonClick = () => {
     setTimeout(() => {
-      dispatch(toggleisDarkTheme());
+      toggleTheme();
     }, 140);
   };
 

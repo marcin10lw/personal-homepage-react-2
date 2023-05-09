@@ -1,14 +1,14 @@
-import { useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import PersonalHomepage from "../../features/personalHomepage/PersonalHomepage";
-import { selectisDarkTheme } from "../../features/personalHomepage/themeSlice";
 import { GlobalStyle } from "./GlobalStyle";
 import { lightTheme, darkTheme } from "./theme";
+import { useContext } from "react";
+import { ToggleThemeContext } from "../../features/personalHomepage/ToggleThemeContext";
 
 const App = () => {
-  const isDarkTheme = useSelector(selectisDarkTheme);
+  const { theme } = useContext(ToggleThemeContext);
 
-  const providerTheme = isDarkTheme ? darkTheme : lightTheme;
+  const providerTheme = theme === "dark" ? darkTheme : lightTheme;
 
   return (
     <ThemeProvider theme={providerTheme}>

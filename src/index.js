@@ -3,12 +3,15 @@ import ReactDOM from "react-dom/client";
 import App from "./core/App";
 import { Provider } from "react-redux";
 import { store } from "./core/store";
+import { ToggleThemeProvider } from "./features/personalHomepage/ToggleThemeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ToggleThemeProvider>
+        <App />
+      </ToggleThemeProvider>
     </Provider>
   </React.StrictMode>
 );
