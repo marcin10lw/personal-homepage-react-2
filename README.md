@@ -31,17 +31,19 @@ YouCode is a frontend development online school with great community.
     -REDUX-SAGA
     -FETCH
     -ES6+ FEATURES
+    -CONTEXT API
 
 ## Page Preview
+
 ![](/personal-homepaget-react-preview.gif)
 
 ## Projects Not Found Preview
+
 ![](/portfolio-notFound-preview.jpg)
 
 ## Mobile Preview
+
 ![](/personal-homepaget-react-mobile-preview.gif)
-
-
 
 ## Create React App
 
