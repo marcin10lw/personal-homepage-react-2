@@ -2,7 +2,7 @@ import { createGlobalStyle, css } from "styled-components";
 import {
   transitionDelay,
   transitionTime,
-} from "./features/personalHomepage/transition";
+} from "../../features/personalHomepage/transition";
 
 export const GlobalStyle = createGlobalStyle`
   html {
