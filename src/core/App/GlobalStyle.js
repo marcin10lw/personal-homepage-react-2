@@ -44,6 +44,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.globalColor};
     padding: 0 16px;
     transition: background-color ${transitionTime} ease-in-out, color ${transitionTime} ease-in-out;
-    transition-delay: ${transitionDelay}
+    transition-delay: ${transitionDelay};
+    overflow-x: hidden;
   }
 `;

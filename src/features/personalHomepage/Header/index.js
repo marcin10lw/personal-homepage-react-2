@@ -10,38 +10,7 @@ import {
 import { Button } from "../Button";
 import ThemeSwitcher from "../ThemeSwitcher";
 import { motion } from "framer-motion";
-
-const headerVariants = {
-  hidden: {
-    opacity: 0,
-    y: "-120",
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      delay: 0.1,
-      ease: "easeInOut",
-      when: "beforeChildren",
-    },
-  },
-};
-
-const buttonVariants = {
-  hidden: {
-    opacity: 0,
-    x: "100vw",
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      duration: 0.5,
-    },
-  },
-};
+import { buttonVariants, headerVariants } from "./variants";
 
 const Header = () => {
   const onButtonClick = () => {
