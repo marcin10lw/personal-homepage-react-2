@@ -2,10 +2,14 @@
 
 ## Description
 
-I present to you my Personal Homepage created with React.js.
+Welcome to my Personal Homepage! This project is a React.js-based website that serves as my personal portfolio and self-promotion page.
 
-In this project I include my skillset, things I want to learn, my github fetched portfolio, contact information and useful links.
-It's a responsive self-promotion page with theme toggler.
+## Features
+ - Displays my skillset and things I want to learn
+ - Shows my GitHub portfolio fetched dynamically
+ - Provides contact information and useful links
+ - Includes a theme toggler for a personalized experience
+ - Fully responsive design
 
 ## Check out the demo!
 
