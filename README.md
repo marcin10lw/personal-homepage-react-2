@@ -2,10 +2,14 @@
 
 ## Description
 
-I present to you my Personal Homepage created with React.js.
+Welcome to my Personal Homepage! This project is a React.js-based website that serves as my personal portfolio and self-promotion page.
 
-In this project I include my skillset, things I want to learn, my github fetched portfolio, contact information and useful links.
-It's a responsive self-promotion page with theme toggler.
+## Features
+ - Displays my skillset and things I want to learn
+ - Shows my GitHub portfolio fetched dynamically
+ - Provides contact information and useful links
+ - Includes a theme toggler for a personalized experience
+ - Fully responsive design
 
 ## Check out the demo!
 
@@ -52,7 +56,7 @@ To get a local copy up and running follow these simple steps.
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/<your-username>/personal-homepage-react.git
+git clone https://github.com/marcin10lw/personal-homepage-react
 ```
 
 2. Change into the project directory:
@@ -75,10 +79,3 @@ npm start
 
 Then open http://localhost:3000 to view the app in your browser.
 
-### Building the app
-
-```bash
-npm run build
-```
-
-The output will be generated in the `build` directory. You can then serve the app using a static file server.
