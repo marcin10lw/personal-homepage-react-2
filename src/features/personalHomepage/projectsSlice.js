@@ -25,10 +25,7 @@ export const { fetchProjects, fetchProjectsSuccess, fetchProjectsError } =
 
 const selectProjectsState = (state) => state.projects;
 
-export const selectProjects = (state) =>
-  selectProjectsState(state).projects.filter(
-    (project) => project.name !== "marcin10lw"
-  );
+export const selectProjects = (state) => selectProjectsState(state).projects;
 export const selectStatus = (state) => selectProjectsState(state).status;
 
 export default projectsSlice.reducer;

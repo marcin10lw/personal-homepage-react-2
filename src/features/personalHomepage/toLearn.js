@@ -1,8 +1,1 @@
-export const toLearn = [
-  "React Context",
-  "Cypress",
-  "Node.js",
-  "Unit testing",
-  "JS classes",
-  "Regex",
-];
+export const toLearn = ["Cypress", "Node.js", "Unit testing", "JS classes"];

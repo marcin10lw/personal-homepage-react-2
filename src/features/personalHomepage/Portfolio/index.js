@@ -11,10 +11,12 @@ import { useSelector } from "react-redux";
 import { selectProjects, selectStatus } from "../projectsSlice";
 import Loading from "../Loading";
 import Error from "../Error";
+import { filterProjects } from "./filterProjects";
 
 const Portfolio = () => {
-  const projects = useSelector(selectProjects);
   const status = useSelector(selectStatus);
+  const projects = useSelector(selectProjects);
+  const filteredProjects = filterProjects(projects);
 
   return (
     <StyledPortfolio>
@@ -27,7 +29,7 @@ const Portfolio = () => {
       {status === "pending" && <Loading />}
       {status === "success" && (
         <PortfolioList>
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <Project
               key={project.id}
               projectName={project.name}

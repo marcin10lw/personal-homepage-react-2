@@ -1,1 +1,1 @@
-export const currentlyLearning = ["TypeScript", "TanStack Query", "Sass"];
+export const currentlyLearning = ["TypeScript", "Unit Testing"];

@@ -25,4 +25,5 @@ export const skillset = [
   "Markdown",
   "Firebase",
   "Framer Motion",
+  "React Query",
 ];
