@@ -2,8 +2,13 @@ const localStorageKey = "theme";
 
 export const getThemeFromLocalStorage = (initialValue) => {
   const localStorageTheme = JSON.parse(localStorage.getItem(localStorageKey));
+
   if (localStorageTheme === null) {
-    return initialValue;
+    if (initialValue === "no-preference") {
+      return "light";
+    } else {
+      return initialValue;
+    }
   }
 
   return localStorageTheme;
