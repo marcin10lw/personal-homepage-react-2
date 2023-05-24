@@ -1,5 +1,7 @@
 # Marcin Augun - Personal Homepage
 
+[![](/demo-image.png)](https://marcin10lw.github.io/personal-homepage-react/)
+
 ## Description
 
 Welcome to my Personal Homepage! This project is a React.js-based website that serves as my personal portfolio and self-promotion page.
@@ -11,9 +13,7 @@ Welcome to my Personal Homepage! This project is a React.js-based website that s
  - Includes a theme toggler for a personalized experience
  - Fully responsive design
 
-## Check out the demo!
-
-[![](/demo-image.png)](https://marcin10lw.github.io/personal-homepage-react/)
+## Live Site URL: [marcin10lw.github.io/personal-homepage-react](https://marcin10lw.github.io/personal-homepage-react/)
 
 ## YouCode
 
