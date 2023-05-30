@@ -26,7 +26,19 @@ const variants = {
   },
 };
 
-const Project = ({ projectName, description, code, userName }) => {
+type ProjectProps = {
+  projectName: string;
+  description: string;
+  code: string;
+  userName: string;
+};
+
+const Project = ({
+  projectName,
+  description,
+  code,
+  userName,
+}: ProjectProps) => {
   const { animation, ref } = useInViewAnimation(0.4);
 
   return (
