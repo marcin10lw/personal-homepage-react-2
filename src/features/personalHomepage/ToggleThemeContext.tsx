@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { PropsWithChildren, createContext } from "react";
 import {
   getThemeFromLocalStorage,
   saveThemeToLocalStorage,
@@ -7,11 +7,18 @@ import { useState } from "react";
 import { useEffect } from "react";
 import usePrefersColorScheme from "use-prefers-color-scheme";
 
-export const ToggleThemeContext = createContext();
+export type Theme = "dark" | "light";
 
-export const ToggleThemeProvider = ({ children }) => {
+type ToggleThemeContextState = {
+  theme: Theme;
+  toggleTheme: () => void;
+};
+
+export const ToggleThemeContext = createContext({} as ToggleThemeContextState);
+
+export const ToggleThemeProvider = ({ children }: PropsWithChildren) => {
   const prefersColorScheme = usePrefersColorScheme();
-  const [theme, setTheme] = useState(
+  const [theme, setTheme] = useState<Theme>(
     getThemeFromLocalStorage(prefersColorScheme)
   );
 

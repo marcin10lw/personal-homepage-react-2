@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../core/store";
 
 const projectsSlice = createSlice({
   name: "projects",
@@ -23,9 +24,11 @@ const projectsSlice = createSlice({
 export const { fetchProjects, fetchProjectsSuccess, fetchProjectsError } =
   projectsSlice.actions;
 
-const selectProjectsState = (state) => state.projects;
+const selectProjectsState = (state: RootState) => state.projects;
 
-export const selectProjects = (state) => selectProjectsState(state).projects;
-export const selectStatus = (state) => selectProjectsState(state).status;
+export const selectProjects = (state: RootState) =>
+  selectProjectsState(state).projects;
+export const selectStatus = (state: RootState) =>
+  selectProjectsState(state).status;
 
 export default projectsSlice.reducer;

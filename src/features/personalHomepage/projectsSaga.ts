@@ -12,6 +12,7 @@ function* fetchProjectsHandler() {
   try {
     yield delay(EXAMPLE_DELAY);
     const projects = yield call(getProjects);
+    console.log(projects);
     yield put(fetchProjectsSuccess(projects));
   } catch (error) {
     yield delay(EXAMPLE_DELAY);
