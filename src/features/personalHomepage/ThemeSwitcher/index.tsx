@@ -12,18 +12,10 @@ const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useContext(ToggleThemeContext);
   const isDarkTheme = theme === "dark";
 
-  const onButtonClick = () => {
-    setTimeout(() => {
-      toggleTheme();
-    }, 140);
-  };
-
   return (
     <Wrapper>
-      <ThemeStatus isDarkTheme={isDarkTheme}>{`DARK MODE ${
-        isDarkTheme ? "ON" : "OFF"
-      }`}</ThemeStatus>
-      <Switcher isDarkTheme={isDarkTheme} onClick={onButtonClick}>
+      <ThemeStatus>{`DARK MODE ${isDarkTheme ? "ON" : "OFF"}`}</ThemeStatus>
+      <Switcher onClick={() => toggleTheme()}>
         <SwitcherBall isDarkTheme={isDarkTheme}>
           <Brightness />
         </SwitcherBall>

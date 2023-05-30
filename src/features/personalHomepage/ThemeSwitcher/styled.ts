@@ -36,7 +36,11 @@ export const Switcher = styled.button`
   transition-delay: ${transitionDelay};
 `;
 
-export const SwitcherBall = styled.div`
+type SwitcherBallProps = {
+  isDarkTheme: boolean;
+};
+
+export const SwitcherBall = styled.div<SwitcherBallProps>`
   display: flex;
   align-items: center;
   justify-content: center;
