@@ -7,11 +7,12 @@
 Welcome to my Personal Homepage! This project is a React.js-based website that serves as my personal portfolio and self-promotion page.
 
 ## Features
- - Displays my skillset and things I want to learn
- - Shows my GitHub portfolio fetched dynamically
- - Provides contact information and useful links
- - Includes a theme toggler for a personalized experience
- - Fully responsive design
+
+- Displays my skillset and things I want to learn
+- Shows my GitHub portfolio fetched dynamically
+- Provides contact information and useful links
+- Includes a theme toggler for a personalized experience
+- Fully responsive design
 
 ## Live Site URL: [marcin10lw.github.io/personal-homepage-react](https://marcin10lw.github.io/personal-homepage-react/)
 
@@ -23,8 +24,8 @@ YouCode is a frontend development online school with great community.
 
 # 💻 Project Tech Stack:
 
-![react](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black)
 ![redux](https://img.shields.io/badge/Redux-764ABC.svg?style=for-the-badge&logo=Redux&logoColor=white)
+![typescript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white)
 ![redux-saga](https://img.shields.io/badge/Redux--Saga-999999.svg?style=for-the-badge&logo=Redux-Saga&logoColor=white)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![framer motion](https://img.shields.io/badge/Framer--Motion-0055FF.svg?style=for-the-badge&logo=Framer&logoColor=white)
@@ -78,4 +79,3 @@ npm start
 ```
 
 Then open http://localhost:3000 to view the app in your browser.
-
