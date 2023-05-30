@@ -18,7 +18,12 @@ const sectionVariants = {
   },
 };
 
-const Section = ({ heading, dataList }) => {
+type SectionProps = {
+  heading: string;
+  dataList: string[];
+};
+
+const Section = ({ heading, dataList }: SectionProps) => {
   const { animation, ref } = useInViewAnimation(0.5);
 
   return (
