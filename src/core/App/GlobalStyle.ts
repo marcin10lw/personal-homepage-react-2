@@ -1,8 +1,9 @@
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import {
   transitionDelay,
   transitionTime,
 } from "../../features/personalHomepage/transition";
+import { lightTheme } from "./theme";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -30,21 +31,16 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #cfcfcf;
     margin-block: 0.3em;
     border-radius: 6px;
-    
-    ${({ isDarkTheme }) =>
-      isDarkTheme &&
-      css`
-        background-color: #8a8a8a;
-      `}
   }
 
   body {
     font-family: 'Inter', sans-serif;
-    background-color: ${({ theme }) => theme.colors.bodyBackground};
+    background-color: ${({ theme }: { theme: typeof lightTheme }) =>
+      theme.colors.bodyBackground};
     color: ${({ theme }) => theme.colors.globalColor};
-    padding: 0 16px;
     transition: background-color ${transitionTime} ease-in-out, color ${transitionTime} ease-in-out;
     transition-delay: ${transitionDelay};
+    padding: 0 16px;
     overflow-x: hidden;
   }
 `;
