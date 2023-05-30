@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { transitionDelay, transitionTime } from "../transition";
 
 export const StyledLoading = styled.div`
@@ -14,6 +14,15 @@ export const LoadingMessage = styled.p`
   transition-delay: ${transitionDelay};
 `;
 
+const spinner = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
 export const LoadingSpinner = styled.div`
   width: 160px;
   height: 160px;
@@ -21,14 +30,5 @@ export const LoadingSpinner = styled.div`
   border: 11.375px solid rgba(209, 213, 218, 0.3);
   border-top: 11.375px solid ${({ theme }) => theme.colors.blue};
   border-radius: 50%;
-  animation: spinner 1s linear infinite;
-
-  @keyframes spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+  animation: ${spinner} 1s linear infinite;
 `;

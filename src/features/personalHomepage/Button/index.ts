@@ -1,9 +1,15 @@
 import styled, { css } from "styled-components";
 import { transitionDelay, transitionTime } from "../transition";
+import { lightTheme } from "../../../core/App/theme";
 
-const buttonHover = ({ theme }) => theme.colors.buttonHover;
+const buttonHover = ({ theme }: { theme: typeof lightTheme }) =>
+  theme.colors.buttonHover;
 
-export const Button = styled.button`
+type ButtonProps = {
+  inError?: boolean;
+};
+
+export const Button = styled.button<ButtonProps>`
   display: flex;
   align-items: center;
   gap: 16px;
