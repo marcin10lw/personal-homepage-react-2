@@ -3,7 +3,6 @@ import {
   transitionDelay,
   transitionTime,
 } from "../../features/personalHomepage/transition";
-import { lightTheme } from "./theme";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -35,8 +34,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Inter', sans-serif;
-    background-color: ${({ theme }: { theme: typeof lightTheme }) =>
-      theme.colors.bodyBackground};
+    background-color: ${({ theme }) => theme.colors.bodyBackground};
     color: ${({ theme }) => theme.colors.globalColor};
     transition: background-color ${transitionTime} ease-in-out, color ${transitionTime} ease-in-out;
     transition-delay: ${transitionDelay};

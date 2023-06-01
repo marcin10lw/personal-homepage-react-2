@@ -42,3 +42,5 @@ export const darkTheme = {
     switcherColor: "#252525",
   },
 };
+
+export const customTheme = lightTheme || darkTheme;
