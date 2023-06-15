@@ -1,6 +1,12 @@
 import { Project } from "../projectsSlice";
 
-const ignoredProjectsNames = ["marcin10lw", "Invoice-app"];
+const ignoredProjectsNames = [
+  "marcin10lw",
+  "Invoice-app",
+  "currency-converter",
+  "homepage",
+  "To-do-list",
+];
 
 export const filterProjects = (projects: Project[]) => {
   return projects.filter((project) => {
