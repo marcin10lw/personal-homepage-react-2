@@ -11,6 +11,7 @@ import { Button } from "../Button";
 import ThemeSwitcher from "../ThemeSwitcher";
 import { motion } from "framer-motion";
 import { buttonVariants, headerVariants } from "./variants";
+import Video from "./Video";
 
 const Header = () => {
   const onButtonClick = () => {
@@ -54,6 +55,7 @@ const Header = () => {
           </Button>
         </div>
       </Wrapper>
+      <Video />
     </StyledHeader>
   );
 };
