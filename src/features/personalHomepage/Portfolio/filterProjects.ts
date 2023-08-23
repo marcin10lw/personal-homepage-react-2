@@ -6,7 +6,7 @@ const ignoredProjectsNames = [
   "currency-converter",
   "homepage",
   "To-do-list",
-  "video-example",
+  "task-manager-api",
 ];
 
 export const filterProjects = (projects: Project[]) => {
